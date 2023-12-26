@@ -1,0 +1,3375 @@
+@prefix : <http://www.semanticweb.org/ren/ontologies/2021/3/untitled-ontology-6#> .
+@prefix PI: <http://example.org/PI#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/ren/ontologies/2021/3/untitled-ontology-6> .
+
+<http://www.semanticweb.org/ren/ontologies/2021/3/untitled-ontology-6> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/PI#has_evidence
+PI:has_evidence rdf:type owl:ObjectProperty .
+
+
+###  http://example.org/PI#has_guideline
+PI:has_guideline rdf:type owl:ObjectProperty .
+
+
+###  http://example.org/PI#has_recommendation
+PI:has_recommendation rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/PI#CH10_Assessment_of_Pressure_Injuries_and_Monitoring_of_Healing
+PI:CH10_Assessment_of_Pressure_Injuries_and_Monitoring_of_Healing rdf:type owl:Class ;
+                                                                  rdfs:subClassOf PI:Part3_Treatment_of_Pressure_Injuries ;
+                                                                  rdfs:comment "CH10 Assessment of Pressure Injuries and Monitoring of Healing" .
+
+
+###  http://example.org/PI#CH10_Guideline
+PI:CH10_Guideline rdf:type owl:Class ;
+                  rdfs:subClassOf PI:CH10_Assessment_of_Pressure_Injuries_and_Monitoring_of_Healing ,
+                                  PI:Recommendation_and_GPS .
+
+
+###  http://example.org/PI#CH11_Guideline
+PI:CH11_Guideline rdf:type owl:Class ;
+                  rdfs:subClassOf PI:CH11_Pain_Assessment_and_Treatment ,
+                                  PI:Recommendation_and_GPS .
+
+
+###  http://example.org/PI#CH11_Pain_Assessment_and_Treatment
+PI:CH11_Pain_Assessment_and_Treatment rdf:type owl:Class ;
+                                      rdfs:subClassOf PI:Part3_Treatment_of_Pressure_Injuries ;
+                                      rdfs:comment "CH11 Pain Assessment and Treatment" .
+
+
+###  http://example.org/PI#CH12_Cleansing_and_Debridement
+PI:CH12_Cleansing_and_Debridement rdf:type owl:Class ;
+                                  rdfs:subClassOf PI:Part3_Treatment_of_Pressure_Injuries ;
+                                  rdfs:comment "CH12 Cleansing and Debridement" .
+
+
+###  http://example.org/PI#CH12_Guideline
+PI:CH12_Guideline rdf:type owl:Class ;
+                  rdfs:subClassOf PI:CH12_Cleansing_and_Debridement ,
+                                  PI:Recommendation_and_GPS .
+
+
+###  http://example.org/PI#CH13_Guideline
+PI:CH13_Guideline rdf:type owl:Class ;
+                  rdfs:subClassOf PI:CH13_Infection_and_Biofilms ,
+                                  PI:Recommendation_and_GPS .
+
+
+###  http://example.org/PI#CH13_Infection_and_Biofilms
+PI:CH13_Infection_and_Biofilms rdf:type owl:Class ;
+                               rdfs:subClassOf PI:Part3_Treatment_of_Pressure_Injuries ;
+                               rdfs:comment "CH13 Infection and Biofilms" .
+
+
+###  http://example.org/PI#CH14_Guideline
+PI:CH14_Guideline rdf:type owl:Class ;
+                  rdfs:subClassOf PI:CH14_Wound_Dressings_for_Treatment_of_Pressure_Injuries ,
+                                  PI:Recommendation_and_GPS .
+
+
+###  http://example.org/PI#CH14_Wound_Dressings_for_Treatment_of_Pressure_Injuries
+PI:CH14_Wound_Dressings_for_Treatment_of_Pressure_Injuries rdf:type owl:Class ;
+                                                           rdfs:subClassOf PI:Part3_Treatment_of_Pressure_Injuries ;
+                                                           rdfs:comment "CH14 Wound Dressings for Treatment of Pressure Injuries" .
+
+
+###  http://example.org/PI#CH15_Biological_Dressings_for_Treatment_of_Pressure_Injuries
+PI:CH15_Biological_Dressings_for_Treatment_of_Pressure_Injuries rdf:type owl:Class ;
+                                                                rdfs:subClassOf PI:Part3_Treatment_of_Pressure_Injuries ;
+                                                                rdfs:comment "CH15 Biological Dressings for Treatment of Pressure Injuries" .
+
+
+###  http://example.org/PI#CH15_Guideline
+PI:CH15_Guideline rdf:type owl:Class ;
+                  rdfs:subClassOf PI:CH15_Biological_Dressings_for_Treatment_of_Pressure_Injuries ,
+                                  PI:Recommendation_and_GPS .
+
+
+###  http://example.org/PI#CH16_Growth_Factors_for_Treatment_of_Pressure_Injuries
+PI:CH16_Growth_Factors_for_Treatment_of_Pressure_Injuries rdf:type owl:Class ;
+                                                          rdfs:subClassOf PI:Part3_Treatment_of_Pressure_Injuries ;
+                                                          rdfs:comment "CH16 Growth Factors for Treatment of Pressure Injuries" .
+
+
+###  http://example.org/PI#CH16_Guideline
+PI:CH16_Guideline rdf:type owl:Class ;
+                  rdfs:subClassOf PI:CH16_Growth_Factors_for_Treatment_of_Pressure_Injuries ,
+                                  PI:Recommendation_and_GPS .
+
+
+###  http://example.org/PI#CH17_Biophysical_Agents
+PI:CH17_Biophysical_Agents rdf:type owl:Class ;
+                           rdfs:subClassOf PI:Part3_Treatment_of_Pressure_Injuries ;
+                           rdfs:comment "CH17 Biophysical Agents" .
+
+
+###  http://example.org/PI#CH17_Guideline
+PI:CH17_Guideline rdf:type owl:Class ;
+                  rdfs:subClassOf PI:CH17_Biophysical_Agents ,
+                                  PI:Recommendation_and_GPS .
+
+
+###  http://example.org/PI#CH18_Guideline
+PI:CH18_Guideline rdf:type owl:Class ;
+                  rdfs:subClassOf PI:CH18_Pressure_Injury_Surgery ,
+                                  PI:Recommendation_and_GPS .
+
+
+###  http://example.org/PI#CH18_Pressure_Injury_Surgery
+PI:CH18_Pressure_Injury_Surgery rdf:type owl:Class ;
+                                rdfs:subClassOf PI:Part3_Treatment_of_Pressure_Injuries ;
+                                rdfs:comment "CH18 Pressure Injury Surgery" .
+
+
+###  http://example.org/PI#CH19_Guideline
+PI:CH19_Guideline rdf:type owl:Class ;
+                  rdfs:subClassOf PI:CH19_Measuring_Pressure_Injury_Prevalence_and_Incidence ,
+                                  PI:Recommendation_and_GPS .
+
+
+###  http://example.org/PI#CH19_Measuring_Pressure_Injury_Prevalence_and_Incidence
+PI:CH19_Measuring_Pressure_Injury_Prevalence_and_Incidence rdf:type owl:Class ;
+                                                           rdfs:subClassOf PI:Part4_Implementing_the_Guideline ;
+                                                           rdfs:comment "CH19 Measuring Pressure Injury Prevalence and Incidence" .
+
+
+###  http://example.org/PI#CH1_Guideline
+PI:CH1_Guideline rdf:type owl:Class ;
+                 rdfs:subClassOf PI:CH1_Risk_Factors_and_Risk_Assessment ,
+                                 PI:Recommendation_and_GPS .
+
+
+###  http://example.org/PI#CH1_Risk_Factors_and_Risk_Assessment
+PI:CH1_Risk_Factors_and_Risk_Assessment rdf:type owl:Class ;
+                                        rdfs:subClassOf PI:Part1_Prevention_of_Pressure_Injuries ;
+                                        rdfs:comment "CH01 Risk Factors and Risk Assessment" .
+
+
+###  http://example.org/PI#CH1_SubHeading
+PI:CH1_SubHeading rdf:type owl:Class ;
+                  rdfs:subClassOf PI:CH1_Risk_Factors_and_Risk_Assessment ,
+                                  PI:SubHeadings .
+
+
+###  http://example.org/PI#CH20_Guideline
+PI:CH20_Guideline rdf:type owl:Class ;
+                  rdfs:subClassOf PI:CH20_Implementing_Best_Practice_in_Clinical_Settings ,
+                                  PI:Recommendation_and_GPS .
+
+
+###  http://example.org/PI#CH20_Implementing_Best_Practice_in_Clinical_Settings
+PI:CH20_Implementing_Best_Practice_in_Clinical_Settings rdf:type owl:Class ;
+                                                        rdfs:subClassOf PI:Part4_Implementing_the_Guideline ;
+                                                        rdfs:comment "CH20 Implementing Best Practice in Clinical Settings" .
+
+
+###  http://example.org/PI#CH21_Guideline
+PI:CH21_Guideline rdf:type owl:Class ;
+                  rdfs:subClassOf PI:CH21_Health_Professional_Education ,
+                                  PI:Recommendation_and_GPS .
+
+
+###  http://example.org/PI#CH21_Health_Professional_Education
+PI:CH21_Health_Professional_Education rdf:type owl:Class ;
+                                      rdfs:subClassOf PI:Part4_Implementing_the_Guideline ;
+                                      rdfs:comment "CH21 Health Professional Education" .
+
+
+###  http://example.org/PI#CH22_Guideline
+PI:CH22_Guideline rdf:type owl:Class ;
+                  rdfs:subClassOf PI:CH22_Quality_of_life_Self-care_and_Education ,
+                                  PI:Recommendation_and_GPS .
+
+
+###  http://example.org/PI#CH22_Quality_of_life_Self-care_and_Education
+PI:CH22_Quality_of_life_Self-care_and_Education rdf:type owl:Class ;
+                                                rdfs:subClassOf PI:Part4_Implementing_the_Guideline ;
+                                                rdfs:comment "CH22 Quality of life,Self-care and Education" .
+
+
+###  http://example.org/PI#CH2_Guideline
+PI:CH2_Guideline rdf:type owl:Class ;
+                 rdfs:subClassOf PI:CH2_Skin_and_Tissue_Assessment ,
+                                 PI:Recommendation_and_GPS .
+
+
+###  http://example.org/PI#CH2_Skin_and_Tissue_Assessment
+PI:CH2_Skin_and_Tissue_Assessment rdf:type owl:Class ;
+                                  rdfs:subClassOf PI:Part1_Prevention_of_Pressure_Injuries ;
+                                  rdfs:comment "CH02 Skin and Tissue Assessment" .
+
+
+###  http://example.org/PI#CH2_SubHeading
+PI:CH2_SubHeading rdf:type owl:Class ;
+                  rdfs:subClassOf PI:CH2_Skin_and_Tissue_Assessment ,
+                                  PI:SubHeadings .
+
+
+###  http://example.org/PI#CH3_Guideline
+PI:CH3_Guideline rdf:type owl:Class ;
+                 rdfs:subClassOf PI:CH3_Preventive_Skin_Care ,
+                                 PI:Recommendation_and_GPS .
+
+
+###  http://example.org/PI#CH3_Preventive_Skin_Care
+PI:CH3_Preventive_Skin_Care rdf:type owl:Class ;
+                            rdfs:subClassOf PI:Part1_Prevention_of_Pressure_Injuries ;
+                            rdfs:comment "CH03 Preventive Skin Care" .
+
+
+###  http://example.org/PI#CH3_SubHeading
+PI:CH3_SubHeading rdf:type owl:Class ;
+                  rdfs:subClassOf PI:CH3_Preventive_Skin_Care ,
+                                  PI:SubHeadings .
+
+
+###  http://example.org/PI#CH4_Guideline
+PI:CH4_Guideline rdf:type owl:Class ;
+                 rdfs:subClassOf PI:CH4_Nutrition_in_Pressure_Injury_Prevention_and_Treatment ,
+                                 PI:Recommendation_and_GPS .
+
+
+###  http://example.org/PI#CH4_Nutrition_in_Pressure_Injury_Prevention_and_Treatment
+PI:CH4_Nutrition_in_Pressure_Injury_Prevention_and_Treatment rdf:type owl:Class ;
+                                                             rdfs:subClassOf PI:Part2_Interventions_for_Prevention_and_Treatment_of_Pressure_Injuries ;
+                                                             rdfs:comment "CH04 Nutrition in Pressure Injury Prevention and Treatment" .
+
+
+###  http://example.org/PI#CH4_SubHeading
+PI:CH4_SubHeading rdf:type owl:Class ;
+                  rdfs:subClassOf PI:CH4_Nutrition_in_Pressure_Injury_Prevention_and_Treatment ,
+                                  PI:SubHeadings .
+
+
+###  http://example.org/PI#CH5_Guideline
+PI:CH5_Guideline rdf:type owl:Class ;
+                 rdfs:subClassOf PI:CH5_Repositioning_and_Early_Mobilization ,
+                                 PI:Recommendation_and_GPS .
+
+
+###  http://example.org/PI#CH5_Repositioning_and_Early_Mobilization
+PI:CH5_Repositioning_and_Early_Mobilization rdf:type owl:Class ;
+                                            rdfs:subClassOf PI:Part2_Interventions_for_Prevention_and_Treatment_of_Pressure_Injuries ;
+                                            rdfs:comment "CH05 Repositioning and Early Mobilization" .
+
+
+###  http://example.org/PI#CH5_SubHeading
+PI:CH5_SubHeading rdf:type owl:Class ;
+                  rdfs:subClassOf PI:CH5_Repositioning_and_Early_Mobilization ,
+                                  PI:SubHeadings .
+
+
+###  http://example.org/PI#CH6_Guideline
+PI:CH6_Guideline rdf:type owl:Class ;
+                 rdfs:subClassOf PI:CH6_Heel_Pressure_Injuries ,
+                                 PI:Recommendation_and_GPS .
+
+
+###  http://example.org/PI#CH6_Heel_Pressure_Injuries
+PI:CH6_Heel_Pressure_Injuries rdf:type owl:Class ;
+                              rdfs:subClassOf PI:Part2_Interventions_for_Prevention_and_Treatment_of_Pressure_Injuries ;
+                              rdfs:comment "CH06 Heel Pressure Injuries" .
+
+
+###  http://example.org/PI#CH6_SubHeading
+PI:CH6_SubHeading rdf:type owl:Class ;
+                  rdfs:subClassOf PI:CH6_Heel_Pressure_Injuries ,
+                                  PI:SubHeadings .
+
+
+###  http://example.org/PI#CH7_Guideline
+PI:CH7_Guideline rdf:type owl:Class ;
+                 rdfs:subClassOf PI:CH7_Support_Surfaces ,
+                                 PI:Recommendation_and_GPS .
+
+
+###  http://example.org/PI#CH7_SubHeading
+PI:CH7_SubHeading rdf:type owl:Class ;
+                  rdfs:subClassOf PI:CH7_Support_Surfaces ,
+                                  PI:SubHeadings .
+
+
+###  http://example.org/PI#CH7_Support_Surfaces
+PI:CH7_Support_Surfaces rdf:type owl:Class ;
+                        owl:equivalentClass PI:SP_Obesity ;
+                        rdfs:subClassOf PI:Part2_Interventions_for_Prevention_and_Treatment_of_Pressure_Injuries ;
+                        rdfs:comment "CH07 Support Surfaces" .
+
+
+###  http://example.org/PI#CH8_Device_Related_Pressure_Injuries
+PI:CH8_Device_Related_Pressure_Injuries rdf:type owl:Class ;
+                                        rdfs:subClassOf PI:Part2_Interventions_for_Prevention_and_Treatment_of_Pressure_Injuries ;
+                                        rdfs:comment "CH08 Device Related Pressure Injuries" .
+
+
+###  http://example.org/PI#CH8_Guideline
+PI:CH8_Guideline rdf:type owl:Class ;
+                 rdfs:subClassOf PI:CH8_Device_Related_Pressure_Injuries ,
+                                 PI:Recommendation_and_GPS .
+
+
+###  http://example.org/PI#CH8_SubHeading
+PI:CH8_SubHeading rdf:type owl:Class ;
+                  rdfs:subClassOf PI:CH8_Device_Related_Pressure_Injuries ,
+                                  PI:SubHeadings .
+
+
+###  http://example.org/PI#CH9_Classification_of_Pressure_Injuries
+PI:CH9_Classification_of_Pressure_Injuries rdf:type owl:Class ;
+                                           rdfs:subClassOf PI:Part3_Treatment_of_Pressure_Injuries ;
+                                           rdfs:comment "CH09 Classification of Pressure Injuries" .
+
+
+###  http://example.org/PI#CH9_Guideline
+PI:CH9_Guideline rdf:type owl:Class ;
+                 rdfs:subClassOf PI:CH9_Classification_of_Pressure_Injuries ,
+                                 PI:Recommendation_and_GPS .
+
+
+###  http://example.org/PI#CQ1_Clinical_Question
+PI:CQ1_Clinical_Question rdf:type owl:Class ;
+                         rdfs:subClassOf PI:CH1_Risk_Factors_and_Risk_Assessment ,
+                                         PI:Clinical_Questions .
+
+
+###  http://example.org/PI#CQ2_Clinical_Question
+PI:CQ2_Clinical_Question rdf:type owl:Class ;
+                         rdfs:subClassOf PI:CH2_Skin_and_Tissue_Assessment ,
+                                         PI:Clinical_Questions .
+
+
+###  http://example.org/PI#CQ3_Clinical_Question
+PI:CQ3_Clinical_Question rdf:type owl:Class ;
+                         rdfs:subClassOf PI:CH3_Preventive_Skin_Care ,
+                                         PI:Clinical_Questions .
+
+
+###  http://example.org/PI#CQ4_Clinical_Question
+PI:CQ4_Clinical_Question rdf:type owl:Class ;
+                         rdfs:subClassOf PI:CH4_Nutrition_in_Pressure_Injury_Prevention_and_Treatment ,
+                                         PI:Clinical_Questions .
+
+
+###  http://example.org/PI#CQ5_Clinical_Question
+PI:CQ5_Clinical_Question rdf:type owl:Class ;
+                         rdfs:subClassOf PI:CH5_Repositioning_and_Early_Mobilization ,
+                                         PI:Clinical_Questions .
+
+
+###  http://example.org/PI#CQ6_Clinical_Question
+PI:CQ6_Clinical_Question rdf:type owl:Class ;
+                         rdfs:subClassOf PI:CH6_Heel_Pressure_Injuries ,
+                                         PI:Clinical_Questions .
+
+
+###  http://example.org/PI#CQ7_Clinical_Question
+PI:CQ7_Clinical_Question rdf:type owl:Class ;
+                         rdfs:subClassOf PI:CH7_Support_Surfaces ,
+                                         PI:Clinical_Questions .
+
+
+###  http://example.org/PI#CQ8_Clinical_Question
+PI:CQ8_Clinical_Question rdf:type owl:Class ;
+                         rdfs:subClassOf PI:CH8_Device_Related_Pressure_Injuries ,
+                                         PI:Clinical_Questions .
+
+
+###  http://example.org/PI#Clinical_Questions
+PI:Clinical_Questions rdf:type owl:Class ;
+                      rdfs:label "Clinical_Questions" .
+
+
+###  http://example.org/PI#Inf_Prevention_Evidence_level_A_and_Definitely_do_it
+PI:Inf_Prevention_Evidence_level_A_and_Definitely_do_it rdf:type owl:Class ;
+                                                        owl:equivalentClass [ owl:intersectionOf ( PI:Inference_in_Prevention
+                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty PI:has_evidence ;
+                                                                                                     owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                          owl:oneOf ( PI:SOE_A
+                                                                                                                                    )
+                                                                                                                        ]
+                                                                                                   ]
+                                                                                                 ) ;
+                                                                              rdf:type owl:Class
+                                                                            ] ;
+                                                        rdfs:subClassOf PI:Inference_in_Prevention .
+
+
+###  http://example.org/PI#Inf_Prevention_Evidence_level_B1_and_Definitely_do_it
+PI:Inf_Prevention_Evidence_level_B1_and_Definitely_do_it rdf:type owl:Class ;
+                                                         owl:equivalentClass [ owl:intersectionOf ( PI:Inference_in_Prevention
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty PI:has_evidence ;
+                                                                                                      owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                           owl:oneOf ( PI:SOE_B1
+                                                                                                                                     )
+                                                                                                                         ]
+                                                                                                    ]
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty PI:has_recommendation ;
+                                                                                                      owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                           owl:oneOf ( PI:SOR_Strong_positive
+                                                                                                                                     )
+                                                                                                                         ]
+                                                                                                    ]
+                                                                                                  ) ;
+                                                                               rdf:type owl:Class
+                                                                             ] ;
+                                                         rdfs:subClassOf PI:Inference_in_Prevention .
+
+
+###  http://example.org/PI#Inf_Prevention_Evidence_level_B1_and_No_recommendation
+PI:Inf_Prevention_Evidence_level_B1_and_No_recommendation rdf:type owl:Class ;
+                                                          owl:equivalentClass [ owl:intersectionOf ( PI:Inference_in_Prevention
+                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty PI:has_evidence ;
+                                                                                                       owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                            owl:oneOf ( PI:SOE_B1
+                                                                                                                                      )
+                                                                                                                          ]
+                                                                                                     ]
+                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty PI:has_recommendation ;
+                                                                                                       owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                            owl:oneOf ( PI:SOR_No_recommendation
+                                                                                                                                      )
+                                                                                                                          ]
+                                                                                                     ]
+                                                                                                   ) ;
+                                                                                rdf:type owl:Class
+                                                                              ] ;
+                                                          rdfs:subClassOf PI:Inference_in_Prevention .
+
+
+###  http://example.org/PI#Inf_Prevention_Evidence_level_B1_and_Probably_do_it
+PI:Inf_Prevention_Evidence_level_B1_and_Probably_do_it rdf:type owl:Class ;
+                                                       owl:equivalentClass [ owl:intersectionOf ( PI:Inference_in_Prevention
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty PI:has_evidence ;
+                                                                                                    owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                         owl:oneOf ( PI:SOE_B1
+                                                                                                                                   )
+                                                                                                                       ]
+                                                                                                  ]
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty PI:has_recommendation ;
+                                                                                                    owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                         owl:oneOf ( PI:SOR_Weak_positive
+                                                                                                                                   )
+                                                                                                                       ]
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ] ;
+                                                       rdfs:subClassOf PI:Inference_in_Prevention .
+
+
+###  http://example.org/PI#Inf_Prevention_Evidence_level_B2_and_Definitely_do_it
+PI:Inf_Prevention_Evidence_level_B2_and_Definitely_do_it rdf:type owl:Class ;
+                                                         owl:equivalentClass [ owl:intersectionOf ( PI:Inference_in_Prevention
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty PI:has_evidence ;
+                                                                                                      owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                           owl:oneOf ( PI:SOE_B2
+                                                                                                                                     )
+                                                                                                                         ]
+                                                                                                    ]
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty PI:has_recommendation ;
+                                                                                                      owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                           owl:oneOf ( PI:SOR_Strong_positive
+                                                                                                                                     )
+                                                                                                                         ]
+                                                                                                    ]
+                                                                                                  ) ;
+                                                                               rdf:type owl:Class
+                                                                             ] ;
+                                                         rdfs:subClassOf PI:Inference_in_Prevention .
+
+
+###  http://example.org/PI#Inf_Prevention_Evidence_level_B2_and_No_recommendation
+PI:Inf_Prevention_Evidence_level_B2_and_No_recommendation rdf:type owl:Class ;
+                                                          owl:equivalentClass [ owl:intersectionOf ( PI:Inference_in_Prevention
+                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty PI:has_evidence ;
+                                                                                                       owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                            owl:oneOf ( PI:SOE_B2
+                                                                                                                                      )
+                                                                                                                          ]
+                                                                                                     ]
+                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty PI:has_recommendation ;
+                                                                                                       owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                            owl:oneOf ( PI:SOR_No_recommendation
+                                                                                                                                      )
+                                                                                                                          ]
+                                                                                                     ]
+                                                                                                   ) ;
+                                                                                rdf:type owl:Class
+                                                                              ] ;
+                                                          rdfs:subClassOf PI:Inference_in_Prevention .
+
+
+###  http://example.org/PI#Inf_Prevention_Evidence_level_B2_and_Probably_do_it
+PI:Inf_Prevention_Evidence_level_B2_and_Probably_do_it rdf:type owl:Class ;
+                                                       owl:equivalentClass [ owl:intersectionOf ( PI:Inference_in_Prevention
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty PI:has_evidence ;
+                                                                                                    owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                         owl:oneOf ( PI:SOE_B2
+                                                                                                                                   )
+                                                                                                                       ]
+                                                                                                  ]
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty PI:has_recommendation ;
+                                                                                                    owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                         owl:oneOf ( PI:SOR_Weak_positive
+                                                                                                                                   )
+                                                                                                                       ]
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ] ;
+                                                       rdfs:subClassOf PI:Inference_in_Prevention .
+
+
+###  http://example.org/PI#Inf_Prevention_Evidence_level_C_and_No_recommendation
+PI:Inf_Prevention_Evidence_level_C_and_No_recommendation rdf:type owl:Class ;
+                                                         owl:equivalentClass [ owl:intersectionOf ( PI:Inference_in_Prevention
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty PI:has_evidence ;
+                                                                                                      owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                           owl:oneOf ( PI:SOE_C
+                                                                                                                                     )
+                                                                                                                         ]
+                                                                                                    ]
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty PI:has_recommendation ;
+                                                                                                      owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                           owl:oneOf ( PI:SOR_No_recommendation
+                                                                                                                                     )
+                                                                                                                         ]
+                                                                                                    ]
+                                                                                                  ) ;
+                                                                               rdf:type owl:Class
+                                                                             ] ;
+                                                         rdfs:subClassOf PI:Inference_in_Prevention .
+
+
+###  http://example.org/PI#Inf_Prevention_Evidence_level_C_and_Probably_do_it
+PI:Inf_Prevention_Evidence_level_C_and_Probably_do_it rdf:type owl:Class ;
+                                                      owl:equivalentClass [ owl:intersectionOf ( PI:Inference_in_Prevention
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty PI:has_evidence ;
+                                                                                                   owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                        owl:oneOf ( PI:SOE_C
+                                                                                                                                  )
+                                                                                                                      ]
+                                                                                                 ]
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty PI:has_recommendation ;
+                                                                                                   owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                                        owl:oneOf ( PI:SOR_Weak_positive
+                                                                                                                                  )
+                                                                                                                      ]
+                                                                                                 ]
+                                                                                               ) ;
+                                                                            rdf:type owl:Class
+                                                                          ] ;
+                                                      rdfs:subClassOf PI:Inference_in_Prevention .
+
+
+###  http://example.org/PI#Inf_Prevention_Evidence_level_GPS
+PI:Inf_Prevention_Evidence_level_GPS rdf:type owl:Class ;
+                                     owl:equivalentClass [ owl:intersectionOf ( PI:Inference_in_Prevention
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty PI:has_evidence ;
+                                                                                  owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                       owl:oneOf ( PI:SOE_GPS
+                                                                                                                 )
+                                                                                                     ]
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ] ;
+                                     rdfs:subClassOf PI:Inference_in_Prevention .
+
+
+###  http://example.org/PI#Inference_in_Prevention
+PI:Inference_in_Prevention rdf:type owl:Class ;
+                           owl:equivalentClass [ rdf:type owl:Class ;
+                                                 owl:unionOf ( PI:Part1_Prevention_of_Pressure_Injuries
+                                                               PI:Part2_Interventions_for_Prevention_and_Treatment_of_Pressure_Injuries
+                                                             )
+                                               ] ;
+                           rdfs:subClassOf PI:Knowledge_Structure .
+
+
+###  http://example.org/PI#Knowledge_Structure
+PI:Knowledge_Structure rdf:type owl:Class .
+
+
+###  http://example.org/PI#Outcome_Quality_Indicators
+PI:Outcome_Quality_Indicators rdf:type owl:Class ;
+                              rdfs:subClassOf PI:Quality_indicators ;
+                              rdfs:label "Outcome_Quality_Indicators" .
+
+
+###  http://example.org/PI#Part1_Prevention_of_Pressure_Injuries
+PI:Part1_Prevention_of_Pressure_Injuries rdf:type owl:Class ;
+                                         rdfs:subClassOf PI:Knowledge_Structure ;
+                                         rdfs:label "Part1 Prevention of Pressure Injuries" .
+
+
+###  http://example.org/PI#Part2_Interventions_for_Prevention_and_Treatment_of_Pressure_Injuries
+PI:Part2_Interventions_for_Prevention_and_Treatment_of_Pressure_Injuries rdf:type owl:Class ;
+                                                                         rdfs:subClassOf PI:Knowledge_Structure ;
+                                                                         rdfs:label "Part2 Interventions for Prevention and Treatment of Pressure Injuries" .
+
+
+###  http://example.org/PI#Part3_Treatment_of_Pressure_Injuries
+PI:Part3_Treatment_of_Pressure_Injuries rdf:type owl:Class ;
+                                        rdfs:subClassOf PI:Knowledge_Structure ;
+                                        rdfs:label "Part3 Treatment of Pressure Injuries" .
+
+
+###  http://example.org/PI#Part4_Implementing_the_Guideline
+PI:Part4_Implementing_the_Guideline rdf:type owl:Class ;
+                                    rdfs:subClassOf PI:Knowledge_Structure ;
+                                    rdfs:label "Part4 Implementing the Guideline" .
+
+
+###  http://example.org/PI#Process_Quality_Indicators
+PI:Process_Quality_Indicators rdf:type owl:Class ;
+                              rdfs:subClassOf PI:Quality_indicators ;
+                              rdfs:label "Process_Quality_Indicators" .
+
+
+###  http://example.org/PI#Quality_indicators
+PI:Quality_indicators rdf:type owl:Class ;
+                      rdfs:label "Quality_indicators" .
+
+
+###  http://example.org/PI#Recommendation_and_GPS
+PI:Recommendation_and_GPS rdf:type owl:Class ;
+                          rdfs:label "Recommendation_and_GPS" .
+
+
+###  http://example.org/PI#SP_Aged_care
+PI:SP_Aged_care rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:unionOf ( PI:CH22_Quality_of_life_Self-care_and_Education
+                                                    PI:CH4_Nutrition_in_Pressure_Injury_Prevention_and_Treatment
+                                                    PI:CH5_Repositioning_and_Early_Mobilization
+                                                    PI:CH7_Support_Surfaces
+                                                  )
+                                    ] ;
+                rdfs:subClassOf PI:Special_Populations ;
+                rdfs:label "Individuals in community, aged care and rehabilitation settings" .
+
+
+###  http://example.org/PI#SP_Critically_ill_individuals
+PI:SP_Critically_ill_individuals rdf:type owl:Class ;
+                                 owl:equivalentClass [ rdf:type owl:Class ;
+                                                       owl:unionOf ( PI:CH3_Preventive_Skin_Care
+                                                                     PI:CH5_Repositioning_and_Early_Mobilization
+                                                                     PI:CH8_Device_Related_Pressure_Injuries
+                                                                   )
+                                                     ] ;
+                                 rdfs:subClassOf PI:Special_Populations ;
+                                 rdfs:label "Critically ill individuals" .
+
+
+###  http://example.org/PI#SP_Neonates_and_Children
+PI:SP_Neonates_and_Children rdf:type owl:Class ;
+                            owl:equivalentClass [ rdf:type owl:Class ;
+                                                  owl:unionOf ( PI:CH13_Infection_and_Biofilms
+                                                                PI:CH14_Wound_Dressings_for_Treatment_of_Pressure_Injuries
+                                                                PI:CH1_Risk_Factors_and_Risk_Assessment
+                                                                PI:CH3_Preventive_Skin_Care
+                                                                PI:CH4_Nutrition_in_Pressure_Injury_Prevention_and_Treatment
+                                                                PI:CH8_Device_Related_Pressure_Injuries
+                                                              )
+                                                ] ;
+                            rdfs:subClassOf PI:Special_Populations ;
+                            rdfs:label "Neonates and children" .
+
+
+###  http://example.org/PI#SP_Obesity
+PI:SP_Obesity rdf:type owl:Class ;
+              rdfs:subClassOf PI:Special_Populations ;
+              rdfs:label "Individuals with obesity" .
+
+
+###  http://example.org/PI#SP_Operating_room
+PI:SP_Operating_room rdf:type owl:Class ;
+                     owl:equivalentClass [ rdf:type owl:Class ;
+                                           owl:unionOf ( PI:CH1_Risk_Factors_and_Risk_Assessment
+                                                         PI:CH5_Repositioning_and_Early_Mobilization
+                                                         PI:CH6_Heel_Pressure_Injuries
+                                                         PI:CH7_Support_Surfaces
+                                                       )
+                                         ] ;
+                     rdfs:subClassOf PI:Special_Populations ;
+                     rdfs:label "Individuals in the operating room" .
+
+
+###  http://example.org/PI#SP_Palliative_care
+PI:SP_Palliative_care rdf:type owl:Class ;
+                      owl:equivalentClass [ rdf:type owl:Class ;
+                                            owl:unionOf ( PI:CH10_Assessment_of_Pressure_Injuries_and_Monitoring_of_Healing
+                                                          PI:CH11_Pain_Assessment_and_Treatment
+                                                        )
+                                          ] ;
+                      rdfs:subClassOf PI:Special_Populations ;
+                      rdfs:label "Individuals receiving palliative care" .
+
+
+###  http://example.org/PI#SP_Spinal_cord_injury
+PI:SP_Spinal_cord_injury rdf:type owl:Class ;
+                         owl:equivalentClass [ rdf:type owl:Class ;
+                                               owl:unionOf ( PI:CH22_Quality_of_life_Self-care_and_Education
+                                                             PI:CH5_Repositioning_and_Early_Mobilization
+                                                             PI:CH7_Support_Surfaces
+                                                             PI:CH8_Device_Related_Pressure_Injuries
+                                                           )
+                                             ] ;
+                         rdfs:subClassOf PI:Special_Populations ;
+                         rdfs:label "Individuals with spinal cord injury" .
+
+
+###  http://example.org/PI#SP_Transit
+PI:SP_Transit rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Class ;
+                                    owl:unionOf ( PI:CH1_Risk_Factors_and_Risk_Assessment
+                                                  PI:CH3_Preventive_Skin_Care
+                                                  PI:CH6_Heel_Pressure_Injuries
+                                                  PI:CH7_Support_Surfaces
+                                                  PI:CH8_Device_Related_Pressure_Injuries
+                                                )
+                                  ] ;
+              rdfs:subClassOf PI:Special_Populations ;
+              rdfs:label "Individuals in transit" .
+
+
+###  http://example.org/PI#Special_Populations
+PI:Special_Populations rdf:type owl:Class .
+
+
+###  http://example.org/PI#Strength_of_evidence
+PI:Strength_of_evidence rdf:type owl:Class ;
+                        rdfs:subClassOf PI:Knowledge_Structure ;
+                        rdfs:label "Strength of evidence (SOE)" .
+
+
+###  http://example.org/PI#Strength_of_recommendation
+PI:Strength_of_recommendation rdf:type owl:Class ;
+                              rdfs:subClassOf PI:Knowledge_Structure ;
+                              rdfs:label "Strength of recommendation (SOR)" .
+
+
+###  http://example.org/PI#Structure_Quality_Indicators
+PI:Structure_Quality_Indicators rdf:type owl:Class ;
+                                rdfs:subClassOf PI:Quality_indicators ;
+                                rdfs:label "Structure_Quality_Indicators" .
+
+
+###  http://example.org/PI#SubHeadings
+PI:SubHeadings rdf:type owl:Class ;
+               rdfs:label "SubHeadings" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/PI#Activity_and_Mobility_Limitations_as_Risk_Factors_for_Pressure_Injuries_in_Adults
+PI:Activity_and_Mobility_Limitations_as_Risk_Factors_for_Pressure_Injuries_in_Adults rdf:type owl:NamedIndividual ,
+                                                                                              PI:CH1_SubHeading ;
+                                                                                     PI:has_guideline PI:QRG01.01 ;
+                                                                                     rdfs:comment "Activity and Mobility Limitations as Risk Factors for Pressure Injuries in Adults" .
+
+
+###  http://example.org/PI#Additional_Risk_Factors_Specific_for_Neonates_and_Children
+PI:Additional_Risk_Factors_Specific_for_Neonates_and_Children rdf:type owl:NamedIndividual ,
+                                                                       PI:CH1_SubHeading ;
+                                                              PI:has_guideline PI:QRG01.19 ,
+                                                                               PI:QRG01.20 ;
+                                                              rdfs:comment "Additional Risk Factors Specific for Neonates and Children" .
+
+
+###  http://example.org/PI#Additional_Risk_Factors_for_Individuals_in_Critical_Care
+PI:Additional_Risk_Factors_for_Individuals_in_Critical_Care rdf:type owl:NamedIndividual ,
+                                                                     PI:CH1_SubHeading ;
+                                                            PI:has_guideline PI:QRG01.18 ;
+                                                            rdfs:comment "Additional Risk Factors for Individuals in Critical Care" .
+
+
+###  http://example.org/PI#Additional_Risk_Factors_for_Individuals_in_the_Operating_Room
+PI:Additional_Risk_Factors_for_Individuals_in_the_Operating_Room rdf:type owl:NamedIndividual ,
+                                                                          PI:CH1_SubHeading ;
+                                                                 PI:has_guideline PI:QRG01.17 ;
+                                                                 rdfs:comment "Additional Risk Factors for Individuals in the Operating Room" .
+
+
+###  http://example.org/PI#Alternating_Pressure_Support_Surfaces
+PI:Alternating_Pressure_Support_Surfaces rdf:type owl:NamedIndividual ,
+                                                  PI:CH7_SubHeading ;
+                                         PI:has_guideline PI:QRG07.07 ;
+                                         rdfs:comment "Alternating Pressure Support Surfaces" .
+
+
+###  http://example.org/PI#Artificial_Nutrition_Enteral_and_Parenteral_Feeding
+PI:Artificial_Nutrition_Enteral_and_Parenteral_Feeding rdf:type owl:NamedIndividual ,
+                                                                PI:CH4_SubHeading ;
+                                                       PI:has_guideline PI:QRG04.11 ,
+                                                                        PI:QRG04.12 ;
+                                                       rdfs:comment "Artificial Nutrition Enteral and Parenteral Feeding" .
+
+
+###  http://example.org/PI#Assessing_Darkly_Pigmented_Skin_and_Soft_Tissue
+PI:Assessing_Darkly_Pigmented_Skin_and_Soft_Tissue rdf:type owl:NamedIndividual ,
+                                                            PI:CH2_SubHeading ;
+                                                   PI:has_guideline PI:QRG02.07 ,
+                                                                    PI:QRG02.08 ;
+                                                   rdfs:comment "Assessing Darkly Pigmented Skin and Soft Tissue" .
+
+
+###  http://example.org/PI#Assessing_the_Heels
+PI:Assessing_the_Heels rdf:type owl:NamedIndividual ,
+                                PI:CH6_SubHeading ;
+                       PI:has_guideline PI:QRG06.01 ;
+                       rdfs:comment "Assessing the Heels" .
+
+
+###  http://example.org/PI#Bed_Linen
+PI:Bed_Linen rdf:type owl:NamedIndividual ,
+                      PI:CH3_SubHeading ;
+             PI:has_guideline PI:QRG03.04 ;
+             rdfs:comment "Bed Linen" .
+
+
+###  http://example.org/PI#Blood_Markers_as_a_Risk_Factor_for_Pressure_Injuries
+PI:Blood_Markers_as_a_Risk_Factor_for_Pressure_Injuries rdf:type owl:NamedIndividual ,
+                                                                 PI:CH1_SubHeading ;
+                                                        PI:has_guideline PI:QRG01.15 ;
+                                                        rdfs:comment "Blood Markers as a Risk Factor for Pressure Injuries" .
+
+
+###  http://example.org/PI#Body_Temperature_as_a_Risk_Factor_for_Pressure_Injuries
+PI:Body_Temperature_as_a_Risk_Factor_for_Pressure_Injuries rdf:type owl:NamedIndividual ,
+                                                                    PI:CH1_SubHeading ;
+                                                           PI:has_guideline PI:QRG01.12 ;
+                                                           rdfs:comment "Body Temperature as a Risk Factor for Pressure Injuries" .
+
+
+###  http://example.org/PI#CQ1.1
+PI:CQ1.1 rdf:type owl:NamedIndividual ,
+                  PI:CQ1_Clinical_Question ;
+         PI:has_guideline PI:QRG01.01 ,
+                          PI:QRG01.02 ,
+                          PI:QRG01.03 ,
+                          PI:QRG01.04 ,
+                          PI:QRG01.05 ,
+                          PI:QRG01.06 ,
+                          PI:QRG01.07 ,
+                          PI:QRG01.08 ,
+                          PI:QRG01.09 ,
+                          PI:QRG01.10 ,
+                          PI:QRG01.11 ,
+                          PI:QRG01.12 ,
+                          PI:QRG01.13 ,
+                          PI:QRG01.14 ,
+                          PI:QRG01.15 ,
+                          PI:QRG01.16 ;
+         rdfs:comment "What factors put individuals at risk for pressure injury development?" ;
+         rdfs:label "CQ1.1" .
+
+
+###  http://example.org/PI#CQ1.2
+PI:CQ1.2 rdf:type owl:NamedIndividual ,
+                  PI:CQ1_Clinical_Question ;
+         PI:has_guideline PI:QRG01.17 ,
+                          PI:QRG01.18 ,
+                          PI:QRG01.19 ,
+                          PI:QRG01.20 ;
+         rdfs:comment "What are the unique pressure injury risk factors to consider for special populations (if any)?" ;
+         rdfs:label "CQ1.2" .
+
+
+###  http://example.org/PI#CQ1.3
+PI:CQ1.3 rdf:type owl:NamedIndividual ,
+                  PI:CQ1_Clinical_Question ;
+         PI:has_guideline PI:QRG01.21 ,
+                          PI:QRG01.22 ,
+                          PI:QRG01.23 ,
+                          PI:QRG01.24 ;
+         rdfs:comment "What are accurate and effective methods for pressure injury risk assessment?" ;
+         rdfs:label "CQ1.3" .
+
+
+###  http://example.org/PI#CQ2.1
+PI:CQ2.1 rdf:type owl:NamedIndividual ,
+                  PI:CQ2_Clinical_Question ;
+         PI:has_guideline PI:QRG02.01 ;
+         rdfs:comment "Are scale/ tools effective methods to assess the skin and soft tissue?" ;
+         rdfs:label "CQ2.1" .
+
+
+###  http://example.org/PI#CQ2.2
+PI:CQ2.2 rdf:type owl:NamedIndividual ,
+                  PI:CQ2_Clinical_Question ;
+         PI:has_guideline PI:QRG02.02 ,
+                          PI:QRG02.03 ;
+         rdfs:comment "What are effective methods of assessing erythema?" ;
+         rdfs:label "CQ2.2" .
+
+
+###  http://example.org/PI#CQ2.3
+PI:CQ2.3 rdf:type owl:NamedIndividual ,
+                  PI:CQ2_Clinical_Question ;
+         PI:has_guideline PI:QRG02.08 ;
+         rdfs:comment "Is ultrasound an effective method for assessing the skin and soft tissue?" ;
+         rdfs:label "CQ2.3" .
+
+
+###  http://example.org/PI#CQ2.4
+PI:CQ2.4 rdf:type owl:NamedIndividual ,
+                  PI:CQ2_Clinical_Question ;
+         PI:has_guideline PI:QRG02.05 ,
+                          PI:QRG02.06 ;
+         rdfs:comment "Is evaluation of skin and tissue moisture an effective method of assessing the skin and soft tissue?" ;
+         rdfs:label "CQ2.4" .
+
+
+###  http://example.org/PI#CQ2.5
+PI:CQ2.5 rdf:type owl:NamedIndividual ,
+                  PI:CQ2_Clinical_Question ;
+         PI:has_guideline PI:QRG02.04 ;
+         rdfs:comment "Is evaluation of skin and tissue temperature an effective method of assessing the skin and soft tissue?" ;
+         rdfs:label "CQ2.5" .
+
+
+###  http://example.org/PI#CQ2.6
+PI:CQ2.6 rdf:type owl:NamedIndividual ,
+                  PI:CQ2_Clinical_Question ;
+         PI:has_guideline PI:QRG02.08 ;
+         rdfs:comment "What additional technologies are accurate and effective methods of assessing skin and soft tissue?" ;
+         rdfs:label "CQ2.6" .
+
+
+###  http://example.org/PI#CQ2.7
+PI:CQ2.7 rdf:type owl:NamedIndividual ,
+                  PI:CQ2_Clinical_Question ;
+         PI:has_guideline PI:QRG02.07 ;
+         rdfs:comment "What methods are effective for assessing skin and soft tissue in individuals with darkly pigmented skin?" ;
+         rdfs:label "CQ2.7" .
+
+
+###  http://example.org/PI#CQ3.1
+PI:CQ3.1 rdf:type owl:NamedIndividual ,
+                  PI:CQ3_Clinical_Question ;
+         PI:has_guideline PI:QRG03.01 ;
+         rdfs:comment "Is massage effective in preventing pressure injuries?" ;
+         rdfs:label "CQ3.1" .
+
+
+###  http://example.org/PI#CQ3.2
+PI:CQ3.2 rdf:type owl:NamedIndividual ,
+                  PI:CQ3_Clinical_Question ;
+         PI:has_guideline PI:QRG03.02 ;
+         rdfs:comment "Are topical products effective in preventing pressure injuries?" ;
+         rdfs:label "CQ3.2" .
+
+
+###  http://example.org/PI#CQ3.3
+PI:CQ3.3 rdf:type owl:NamedIndividual ,
+                  PI:CQ3_Clinical_Question ;
+         PI:has_guideline PI:QRG03.05 ;
+         rdfs:comment "Are prophylactic dressings effective for preventing pressure injuries?" ;
+         rdfs:label "CQ3.3" .
+
+
+###  http://example.org/PI#CQ3.4
+PI:CQ3.4 rdf:type owl:NamedIndividual ,
+                  PI:CQ3_Clinical_Question ;
+         PI:has_guideline PI:QRG03.03 ;
+         rdfs:comment "Are continence management strategies effective in preventing and treating pressure injuries?" ;
+         rdfs:label "CQ3.4" .
+
+
+###  http://example.org/PI#CQ3.5
+PI:CQ3.5 rdf:type owl:NamedIndividual ,
+                  PI:CQ3_Clinical_Question ;
+         PI:has_guideline PI:QRG03.04 ;
+         rdfs:comment "Are low friction or microclimate control fabrics effective for preventing pressure injuries?" ;
+         rdfs:label "CQ3.5" .
+
+
+###  http://example.org/PI#CQ4.1
+PI:CQ4.1 rdf:type owl:NamedIndividual ,
+                  PI:CQ4_Clinical_Question ;
+         PI:has_guideline PI:QRG04.01 ,
+                          PI:QRG04.02 ;
+         rdfs:comment "What are accurate and effective methods for assessing nutritional status of individuals with or at risk of pressure injuries?" ;
+         rdfs:label "CQ4.1" .
+
+
+###  http://example.org/PI#CQ4.2
+PI:CQ4.2 rdf:type owl:NamedIndividual ,
+                  PI:CQ4_Clinical_Question ;
+         PI:has_guideline PI:QRG04.03 ,
+                          PI:QRG04.11 ,
+                          PI:QRG04.13 ;
+         rdfs:comment "What nutritional interventions are effective in preventing pressure injuries?" ;
+         rdfs:label "CQ4.2" .
+
+
+###  http://example.org/PI#CQ4.3
+PI:CQ4.3 rdf:type owl:NamedIndividual ,
+                  PI:CQ4_Clinical_Question ;
+         PI:has_guideline PI:QRG04.04 ,
+                          PI:QRG04.05 ,
+                          PI:QRG04.06 ,
+                          PI:QRG04.07 ;
+         rdfs:comment "Is there an ideal nutritional regimen to reduce the risk of pressure injuries, and if so, what should it include?" ;
+         rdfs:label "CQ4.3" .
+
+
+###  http://example.org/PI#CQ4.4
+PI:CQ4.4 rdf:type owl:NamedIndividual ,
+                  PI:CQ4_Clinical_Question ;
+         PI:has_guideline PI:QRG04.08 ;
+         rdfs:comment "Are any nutritional supplements (e.g. formulas, specific vitamins/minerals) effective in reducing risk of pressure injury development?" ;
+         rdfs:label "CQ4.4" .
+
+
+###  http://example.org/PI#CQ4.5
+PI:CQ4.5 rdf:type owl:NamedIndividual ,
+                  PI:CQ4_Clinical_Question ;
+         PI:has_guideline PI:QRG04.03 ,
+                          PI:QRG04.11 ,
+                          PI:QRG04.13 ;
+         rdfs:comment "What nutritional interventions are effective in supporting pressure injury healing?" ;
+         rdfs:label "CQ4.5" .
+
+
+###  http://example.org/PI#CQ4.6
+PI:CQ4.6 rdf:type owl:NamedIndividual ,
+                  PI:CQ4_Clinical_Question ;
+         PI:has_guideline PI:QRG04.04 ,
+                          PI:QRG04.05 ,
+                          PI:QRG04.06 ,
+                          PI:QRG04.07 ;
+         rdfs:comment "Is there an optimal nutritional regimen to promote healing of pressure injuries, and if so, what should it include?" ;
+         rdfs:label "CQ4.6" .
+
+
+###  http://example.org/PI#CQ4.7
+PI:CQ4.7 rdf:type owl:NamedIndividual ,
+                  PI:CQ4_Clinical_Question ;
+         PI:has_guideline PI:QRG04.09 ,
+                          PI:QRG04.10 ;
+         rdfs:comment "Are any specific oral nutritional supplements or formula effective in promoting healing of pressure injuries?" ;
+         rdfs:label "CQ4.7" .
+
+
+###  http://example.org/PI#CQ4.8
+PI:CQ4.8 rdf:type owl:NamedIndividual ,
+                  PI:CQ4_Clinical_Question ;
+         PI:has_guideline PI:QRG04.14 ,
+                          PI:QRG04.15 ;
+         rdfs:comment "Nutrition for Neonates and children" ;
+         rdfs:label "CQ4.8" .
+
+
+###  http://example.org/PI#CQ5.1
+PI:CQ5.1 rdf:type owl:NamedIndividual ,
+                  PI:CQ5_Clinical_Question ;
+         PI:has_guideline PI:QRG05.01 ,
+                          PI:QRG05.02 ,
+                          PI:QRG05.03 ;
+         rdfs:comment "How often should repositioning be performed to reduce the risk of pressure injuries?" ;
+         rdfs:label "CQ5.1" .
+
+
+###  http://example.org/PI#CQ5.2
+PI:CQ5.2 rdf:type owl:NamedIndividual ,
+                  PI:CQ5_Clinical_Question ;
+         PI:has_guideline PI:QRG05.04 ,
+                          PI:QRG05.07 ;
+         rdfs:comment "What criteria should be used to determine and monitor frequency of turning?" ;
+         rdfs:label "CQ5.2" .
+
+
+###  http://example.org/PI#CQ5.3
+PI:CQ5.3 rdf:type owl:NamedIndividual ,
+                  PI:CQ5_Clinical_Question ;
+         PI:has_guideline PI:QRG05.05 ,
+                          PI:QRG05.06 ,
+                          PI:QRG05.08 ,
+                          PI:QRG05.09 ,
+                          PI:QRG05.12 ,
+                          PI:QRG05.14 ;
+         rdfs:comment "What positioning techniques are most effective in redistributing pressure and preventing shear?" ;
+         rdfs:label "CQ5.3" .
+
+
+###  http://example.org/PI#CQ5.4
+PI:CQ5.4 rdf:type owl:NamedIndividual ,
+                  PI:CQ5_Clinical_Question ;
+         PI:has_guideline PI:QRG05.11 ,
+                          PI:QRG05.13 ,
+                          PI:QRG05.14 ,
+                          PI:QRG05.15 ;
+         rdfs:comment "Do programs of early mobilization affect pressure injury rates?" ;
+         rdfs:label "CQ5.4" .
+
+
+###  http://example.org/PI#CQ5.5
+PI:CQ5.5 rdf:type owl:NamedIndividual ,
+                  PI:CQ5_Clinical_Question ;
+         PI:has_guideline PI:QRG05.17 ;
+         rdfs:comment "For Spinal cord." ;
+         rdfs:label "CQ5.5" .
+
+
+###  http://example.org/PI#CQ5.6
+PI:CQ5.6 rdf:type owl:NamedIndividual ,
+                  PI:CQ5_Clinical_Question ;
+         PI:has_guideline PI:QRG05.17 ,
+                          PI:QRG05.18 ;
+         rdfs:comment "For critical ill." ;
+         rdfs:label "CQ5.6" .
+
+
+###  http://example.org/PI#CQ5.7
+PI:CQ5.7 rdf:type owl:NamedIndividual ,
+                  PI:CQ5_Clinical_Question ;
+         PI:has_guideline PI:QRG05.19 ;
+         rdfs:comment "For Operating room/Surgery." ;
+         rdfs:label "CQ5.7" .
+
+
+###  http://example.org/PI#CQ6.1
+PI:CQ6.1 rdf:type owl:NamedIndividual ,
+                  PI:CQ6_Clinical_Question ;
+         PI:has_guideline PI:QRG06.01 ;
+         rdfs:comment "What factors put individuals at risk for heel pressure injury development?" ;
+         rdfs:label "CQ6.1" .
+
+
+###  http://example.org/PI#CQ6.2
+PI:CQ6.2 rdf:type owl:NamedIndividual ,
+                  PI:CQ6_Clinical_Question ;
+         PI:has_guideline PI:QRG06.01 ;
+         rdfs:comment "What are accurate and effective methods for assessing heel skin and tissue?" ;
+         rdfs:label "CQ6.2" .
+
+
+###  http://example.org/PI#CQ6.3
+PI:CQ6.3 rdf:type owl:NamedIndividual ,
+                  PI:CQ6_Clinical_Question ;
+         PI:has_guideline PI:QRG06.04 ;
+         rdfs:comment "What are effective local management strategies (e.g., skin care, prophylactic dressings) in preventing heel pressure injuries?" ;
+         rdfs:label "CQ6.3" .
+
+
+###  http://example.org/PI#CQ6.4
+PI:CQ6.4 rdf:type owl:NamedIndividual ,
+                  PI:CQ6_Clinical_Question ;
+         PI:has_guideline PI:QRG06.02 ,
+                          PI:QRG06.03 ;
+         rdfs:comment "What heel repositioning interventions are effective in preventing heel pressure injuries?" ;
+         rdfs:label "CQ6.4" .
+
+
+###  http://example.org/PI#CQ6.5
+PI:CQ6.5 rdf:type owl:NamedIndividual ,
+                  PI:CQ6_Clinical_Question ;
+         PI:has_guideline PI:QRG06.02 ,
+                          PI:QRG06.03 ;
+         rdfs:comment "What support surfaces and devices are effective in preventing heel pressure injuries?" ;
+         rdfs:label "CQ6.5" .
+
+
+###  http://example.org/PI#CQ6.6
+PI:CQ6.6 rdf:type owl:NamedIndividual ,
+                  PI:CQ6_Clinical_Question ;
+         PI:has_guideline PI:QRG06.02 ,
+                          PI:QRG06.03 ;
+         rdfs:comment "What are effective strategies for treating heel pressure injuries?" ;
+         rdfs:label "CQ6.6" .
+
+
+###  http://example.org/PI#CQ6.7
+PI:CQ6.7 rdf:type owl:NamedIndividual ,
+                  PI:CQ6_Clinical_Question ;
+         PI:has_guideline PI:QRG06.04 ;
+         rdfs:comment "What factors affect healing of heel pressure injuries?" ;
+         rdfs:label "CQ6.7" .
+
+
+###  http://example.org/PI#CQ7.01
+PI:CQ7.01 rdf:type owl:NamedIndividual ,
+                   PI:CQ7_Clinical_Question ;
+          PI:has_guideline PI:QRG07.04 ,
+                           PI:QRG07.05 ,
+                           PI:QRG07.06 ;
+          rdfs:comment "What reactive support surfaces are effective in preventing pressure injuries?" ;
+          rdfs:label "CQ7.1" .
+
+
+###  http://example.org/PI#CQ7.02
+PI:CQ7.02 rdf:type owl:NamedIndividual ,
+                   PI:CQ7_Clinical_Question ;
+          PI:has_guideline PI:QRG07.07 ;
+          rdfs:comment "What active support surfaces are effective in preventing pressure injuries?" ;
+          rdfs:label "CQ7.2" .
+
+
+###  http://example.org/PI#CQ7.03
+PI:CQ7.03 rdf:type owl:NamedIndividual ,
+                   PI:CQ7_Clinical_Question ;
+          PI:has_guideline PI:QRG07.01 ,
+                           PI:QRG07.03 ,
+                           PI:QRG07.08 ;
+          rdfs:comment "When should an active support surface be used to prevent pressure injuries?" ;
+          rdfs:label "CQ7.3" .
+
+
+###  http://example.org/PI#CQ7.04
+PI:CQ7.04 rdf:type owl:NamedIndividual ,
+                   PI:CQ7_Clinical_Question ;
+          PI:has_guideline PI:QRG07.11 ,
+                           PI:QRG07.12 ,
+                           PI:QRG07.13 ,
+                           PI:QRG07.14 ;
+          rdfs:comment "What is the most effective seating support surface for preventing pressure injuries?" ;
+          rdfs:label "CQ7.4" .
+
+
+###  http://example.org/PI#CQ7.05
+PI:CQ7.05 rdf:type owl:NamedIndividual ,
+                   PI:CQ7_Clinical_Question ;
+          PI:has_guideline PI:QRG07.10 ;
+          rdfs:comment "What reactive support surfaces are effective in supporting pressure injury healing?" ;
+          rdfs:label "CQ7.5" .
+
+
+###  http://example.org/PI#CQ7.06
+PI:CQ7.06 rdf:type owl:NamedIndividual ,
+                   PI:CQ7_Clinical_Question ;
+          PI:has_guideline PI:QRG07.09 ;
+          rdfs:comment "What active support surfaces are effective in supporting pressure injury healing?" ;
+          rdfs:label "CQ7.6" .
+
+
+###  http://example.org/PI#CQ7.07
+PI:CQ7.07 rdf:type owl:NamedIndividual ,
+                   PI:CQ7_Clinical_Question ;
+          PI:has_guideline PI:QRG07.09 ;
+          rdfs:comment "When should an active support surface be used to support pressure injury healing?" ;
+          rdfs:label "CQ7.7" .
+
+
+###  http://example.org/PI#CQ7.08
+PI:CQ7.08 rdf:type owl:NamedIndividual ,
+                   PI:CQ7_Clinical_Question ;
+          PI:has_guideline PI:QRG07.11 ,
+                           PI:QRG07.12 ,
+                           PI:QRG07.13 ,
+                           PI:QRG07.14 ;
+          rdfs:comment "What is the most effective seating support surface for healing pressure injuries?" ;
+          rdfs:label "CQ7.8" .
+
+
+###  http://example.org/PI#CQ7.09
+PI:CQ7.09 rdf:type owl:NamedIndividual ,
+                   PI:CQ7_Clinical_Question ;
+          PI:has_guideline PI:QRG07.15 ,
+                           PI:QRG07.16 ;
+          rdfs:comment "Support Surface Use During Transportation." ;
+          rdfs:label "CQ7.9" .
+
+
+###  http://example.org/PI#CQ7.10
+PI:CQ7.10 rdf:type owl:NamedIndividual ,
+                   PI:CQ7_Clinical_Question ;
+          PI:has_guideline PI:QRG07.03 ,
+                           PI:QRG07.14 ;
+          rdfs:comment "For Obesity." ;
+          rdfs:label "CQ7.10" .
+
+
+###  http://example.org/PI#CQ7.11
+PI:CQ7.11 rdf:type owl:NamedIndividual ,
+                   PI:CQ7_Clinical_Question ;
+          PI:has_guideline PI:QRG07.08 ;
+          rdfs:comment "For Surgery." ;
+          rdfs:label "CQ7.11" .
+
+
+###  http://example.org/PI#CQ8.1
+PI:CQ8.1 rdf:type owl:NamedIndividual ,
+                  PI:CQ8_Clinical_Question ;
+         PI:has_guideline PI:QRG08.01 ,
+                          PI:QRG08.02 ,
+                          PI:QRG08.03 ;
+         rdfs:comment "What factors should be considered when selecting and fitting a medical device?" ;
+         rdfs:label "CQ8.1" .
+
+
+###  http://example.org/PI#CQ8.2
+PI:CQ8.2 rdf:type owl:NamedIndividual ,
+                  PI:CQ8_Clinical_Question ;
+         PI:has_guideline PI:QRG08.04 ,
+                          PI:QRG08.05 ,
+                          PI:QRG08.06 ,
+                          PI:QRG08.07 ,
+                          PI:QRG08.08 ;
+         rdfs:comment "What local management strategies are effective in preventing MDRPIs?" ;
+         rdfs:label "CQ8.2" .
+
+
+###  http://example.org/PI#CQ8.3
+PI:CQ8.3 rdf:type owl:NamedIndividual ,
+                  PI:CQ8_Clinical_Question ;
+         PI:has_guideline PI:QRG08.05 ;
+         rdfs:comment "Is a prophylactic dressing effective for preventing MDRPIs? If so, what factors should be considered when selecting a prophylactic dressing?" ;
+         rdfs:label "CQ8.3" .
+
+
+###  http://example.org/PI#Conducting_Skin_and_Tissue_Assessment
+PI:Conducting_Skin_and_Tissue_Assessment rdf:type owl:NamedIndividual ,
+                                                  PI:CH2_SubHeading ;
+                                         PI:has_guideline PI:QRG02.01 ,
+                                                          PI:QRG02.02 ,
+                                                          PI:QRG02.03 ,
+                                                          PI:QRG02.04 ,
+                                                          PI:QRG02.05 ,
+                                                          PI:QRG02.06 ;
+                                         rdfs:comment "Conducting Skin and Tissue Assessment" .
+
+
+###  http://example.org/PI#Continence_Management
+PI:Continence_Management rdf:type owl:NamedIndividual ,
+                                  PI:CH3_SubHeading ;
+                         PI:has_guideline PI:QRG03.03 ;
+                         rdfs:comment "Continence Management" .
+
+
+###  http://example.org/PI#Early_Mobilization
+PI:Early_Mobilization rdf:type owl:NamedIndividual ,
+                               PI:CH5_SubHeading ;
+                      PI:has_guideline PI:QRG05.15 ;
+                      rdfs:comment "Early Mobilization" .
+
+
+###  http://example.org/PI#Energy_and_Protein_Intake_for_Individuals_at_Risk_of_Pressure_Injuries
+PI:Energy_and_Protein_Intake_for_Individuals_at_Risk_of_Pressure_Injuries rdf:type owl:NamedIndividual ,
+                                                                                   PI:CH4_SubHeading ;
+                                                                          PI:has_guideline PI:QRG04.04 ,
+                                                                                           PI:QRG04.05 ;
+                                                                          rdfs:comment "Energy and Protein Intake for Individuals at Risk of Pressure Injuries" .
+
+
+###  http://example.org/PI#Energy_and_Protein_Intake_for_Individuals_with_Pressure_Injuries
+PI:Energy_and_Protein_Intake_for_Individuals_with_Pressure_Injuries rdf:type owl:NamedIndividual ,
+                                                                             PI:CH4_SubHeading ;
+                                                                    PI:has_guideline PI:QRG04.06 ,
+                                                                                     PI:QRG04.07 ;
+                                                                    rdfs:comment "Energy and Protein Intake for Individuals with Pressure Injuries" .
+
+
+###  http://example.org/PI#General_Repositioning_for_All_Individuals
+PI:General_Repositioning_for_All_Individuals rdf:type owl:NamedIndividual ,
+                                                      PI:CH5_SubHeading ;
+                                             PI:has_guideline PI:QRG05.01 ;
+                                             rdfs:comment "General Repositioning for All Individuals" .
+
+
+###  http://example.org/PI#General_and_Mental_Health_Status_as_Risk_Factors_for_Pressure_Injuries
+PI:General_and_Mental_Health_Status_as_Risk_Factors_for_Pressure_Injuries rdf:type owl:NamedIndividual ,
+                                                                                   PI:CH1_SubHeading ;
+                                                                          PI:has_guideline PI:QRG01.16 ;
+                                                                          rdfs:comment "General and Mental Health Status as Risk Factors for Pressure Injuries" .
+
+
+###  http://example.org/PI#Hydration
+PI:Hydration rdf:type owl:NamedIndividual ,
+                      PI:CH4_SubHeading ;
+             PI:has_guideline PI:QRG04.13 ;
+             rdfs:comment "Hydration" .
+
+
+###  http://example.org/PI#Mattress_and_Bed_Support_Surfaces_for_Individuals_with_Existing_Pressure_Injuries
+PI:Mattress_and_Bed_Support_Surfaces_for_Individuals_with_Existing_Pressure_Injuries rdf:type owl:NamedIndividual ,
+                                                                                              PI:CH7_SubHeading ;
+                                                                                     PI:has_guideline PI:QRG07.09 ,
+                                                                                                      PI:QRG07.10 ;
+                                                                                     rdfs:comment "Mattress and Bed Support Surfaces for Individuals with Existing Pressure Injuries" .
+
+
+###  http://example.org/PI#Medical_Grade_Sheepskins
+PI:Medical_Grade_Sheepskins rdf:type owl:NamedIndividual ,
+                                     PI:CH7_SubHeading ;
+                            PI:has_guideline PI:QRG07.06 ;
+                            rdfs:comment "Medical Grade Sheepskins" .
+
+
+###  http://example.org/PI#Moisture_as_a_Risk_Factor_for_Pressure_Injuries
+PI:Moisture_as_a_Risk_Factor_for_Pressure_Injuries rdf:type owl:NamedIndividual ,
+                                                            PI:CH1_SubHeading ;
+                                                   PI:has_guideline PI:QRG01.11 ;
+                                                   rdfs:comment "Moisture as a Risk Factor for Pressure Injuries" .
+
+
+###  http://example.org/PI#Nutrition_Assessment
+PI:Nutrition_Assessment rdf:type owl:NamedIndividual ,
+                                 PI:CH4_SubHeading ;
+                        PI:has_guideline PI:QRG04.02 ;
+                        rdfs:comment "Nutrition Assessment" .
+
+
+###  http://example.org/PI#Nutrition_Care_Planning
+PI:Nutrition_Care_Planning rdf:type owl:NamedIndividual ,
+                                    PI:CH4_SubHeading ;
+                           PI:has_guideline PI:QRG04.03 ;
+                           rdfs:comment "Nutrition Care Planning" .
+
+
+###  http://example.org/PI#Nutrition_Indicators_as_Risk_Factors_for_Pressure_Injuries
+PI:Nutrition_Indicators_as_Risk_Factors_for_Pressure_Injuries rdf:type owl:NamedIndividual ,
+                                                                       PI:CH1_SubHeading ;
+                                                              PI:has_guideline PI:QRG01.10 ;
+                                                              rdfs:comment "Nutrition Indicators as Risk Factors for Pressure Injuries" .
+
+
+###  http://example.org/PI#Nutrition_Management_in_Neonates_and_Children
+PI:Nutrition_Management_in_Neonates_and_Children rdf:type owl:NamedIndividual ,
+                                                          PI:CH4_SubHeading ;
+                                                 PI:has_guideline PI:QRG04.14 ,
+                                                                  PI:QRG04.15 ;
+                                                 rdfs:comment "Nutrition Management in Neonates and Children" .
+
+
+###  http://example.org/PI#Nutrition_Screening
+PI:Nutrition_Screening rdf:type owl:NamedIndividual ,
+                                PI:CH4_SubHeading ;
+                       PI:has_guideline PI:QRG04.01 ;
+                       rdfs:comment "Nutrition Screening" .
+
+
+###  http://example.org/PI#Nutritional_Supplementation
+PI:Nutritional_Supplementation rdf:type owl:NamedIndividual ,
+                                        PI:CH4_SubHeading ;
+                               PI:has_guideline PI:QRG04.08 ,
+                                                PI:QRG04.09 ,
+                                                PI:QRG04.10 ;
+                               rdfs:comment "Nutritional Supplementation" .
+
+
+###  http://example.org/PI#Older_Age_as_a_Risk_Factor_for_Pressure_Injuries
+PI:Older_Age_as_a_Risk_Factor_for_Pressure_Injuries rdf:type owl:NamedIndividual ,
+                                                             PI:CH1_SubHeading ;
+                                                    PI:has_guideline PI:QRG01.13 ;
+                                                    rdfs:comment "Older Age as a Risk Factor for Pressure Injuries" .
+
+
+###  http://example.org/PI#Perfusion_Circulation_and_Oxygenation_as_Risk_Factors_for_Pressure_Injuries
+PI:Perfusion_Circulation_and_Oxygenation_as_Risk_Factors_for_Pressure_Injuries rdf:type owl:NamedIndividual ,
+                                                                                        PI:CH1_SubHeading ;
+                                                                               PI:has_guideline PI:QRG01.07 ,
+                                                                                                PI:QRG01.08 ,
+                                                                                                PI:QRG01.09 ;
+                                                                               rdfs:comment "Perfusion, Circulation and Oxygenation as Risk Factors for Pressure Injuries" .
+
+
+###  http://example.org/PI#Positioning_to_Prevent_and_Treat_Heel_Pressure_Injuries
+PI:Positioning_to_Prevent_and_Treat_Heel_Pressure_Injuries rdf:type owl:NamedIndividual ,
+                                                                    PI:CH6_SubHeading ;
+                                                           PI:has_guideline PI:QRG06.02 ,
+                                                                            PI:QRG06.03 ;
+                                                           rdfs:comment "Positioning to Prevent and Treat Heel Pressure Injuries" .
+
+
+###  http://example.org/PI#Pressure_Injury_Risk_Screening_and_Assessment
+PI:Pressure_Injury_Risk_Screening_and_Assessment rdf:type owl:NamedIndividual ,
+                                                          PI:CH1_SubHeading ;
+                                                 PI:has_guideline PI:QRG01.21 ,
+                                                                  PI:QRG01.22 ,
+                                                                  PI:QRG01.23 ,
+                                                                  PI:QRG01.24 ;
+                                                 rdfs:comment "Pressure Injury Risk Screening and Assessment" .
+
+
+###  http://example.org/PI#Pressure_Relieving_Maneuvers
+PI:Pressure_Relieving_Maneuvers rdf:type owl:NamedIndividual ,
+                                         PI:CH5_SubHeading ;
+                                PI:has_guideline PI:QRG05.14 ;
+                                rdfs:comment "Pressure Relieving Maneuvers" .
+
+
+###  http://example.org/PI#Prone_Position
+PI:Prone_Position rdf:type owl:NamedIndividual ,
+                           PI:CH5_SubHeading ;
+                  PI:has_guideline PI:QRG05.10 ;
+                  rdfs:comment "Prone Position" .
+
+
+###  http://example.org/PI#Prophylactic_Dressings
+PI:Prophylactic_Dressings rdf:type owl:NamedIndividual ,
+                                   PI:CH3_SubHeading ;
+                          PI:has_guideline PI:QRG03.05 ;
+                          rdfs:comment "Prophylactic Dressings" .
+
+
+###  http://example.org/PI#Prophylactic_Dressings_for_the_Heels
+PI:Prophylactic_Dressings_for_the_Heels rdf:type owl:NamedIndividual ,
+                                                 PI:CH6_SubHeading ;
+                                        PI:has_guideline PI:QRG06.04 ;
+                                        rdfs:comment "Prophylactic Dressings for the Heels" .
+
+
+###  http://example.org/PI#QI01
+PI:QI01 rdf:type owl:NamedIndividual ,
+                 PI:Structure_Quality_Indicators ;
+        PI:has_guideline PI:QRG20.01 ;
+        rdfs:comment "A plan for assessing appropriate staff workforce characteristics (e.g., staffing levels and skill mix) to assure quality care is in place." ;
+        <http://www.w3.org/2004/02/skos/core#definition> "The organization’s staff workforce plan should reflect the current best practice to assure quality of care is provided." .
+
+
+###  http://example.org/PI#QI02
+PI:QI02 rdf:type owl:NamedIndividual ,
+                 PI:Structure_Quality_Indicators ;
+        PI:has_guideline PI:QRG20.05 ;
+        rdfs:comment "The organization has a structured, tailored multi-faceted pressure injury quality improvement program in place." ;
+        <http://www.w3.org/2004/02/skos/core#definition> "The organization’s pressure injury quality improvement program includes a structured, tailored multi-faceted bundle of prevention strategies/interventions that addresses the specific needs of facility stakeholders." .
+
+
+###  http://example.org/PI#QI03
+PI:QI03 rdf:type owl:NamedIndividual ,
+                 PI:Structure_Quality_Indicators ;
+        PI:has_guideline PI:QRG20.07 ;
+        rdfs:comment "The organization has policies and procedures on pressure injury prevention and treatment that reflect the current best practice outlined in this guideline." ;
+        <http://www.w3.org/2004/02/skos/core#definition> "The organization’s policies and procedures governing the prevention and treatment of pressure injuries should reflect the current best practice outlined in this international guideline and relevant local requirements." .
+
+
+###  http://example.org/PI#QI04
+PI:QI04 rdf:type owl:NamedIndividual ,
+                 PI:Structure_Quality_Indicators ;
+        PI:has_guideline PI:QRG21.02 ;
+        rdfs:comment "Health professionals receive regular education in pressure injury prevention and treatment." ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Education and training refer to evidence-based education in pressure injuries." .
+
+
+###  http://example.org/PI#QI05
+PI:QI05 rdf:type owl:NamedIndividual ,
+                 PI:Structure_Quality_Indicators ;
+        PI:has_guideline PI:QRG20.06 ;
+        rdfs:comment "Organization management, health professionals, patients, and caregivers are involved in the oversight and implementation of the pressure injury prevention program." ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Management, health professionals, patients, and caregivers participate in the development, oversight and implementation of the pressure injury prevention program." .
+
+
+###  http://example.org/PI#QI06
+PI:QI06 rdf:type owl:NamedIndividual ,
+                 PI:Structure_Quality_Indicators ;
+        PI:has_guideline PI:QRG20.04 ;
+        rdfs:comment "The quality improvement program addresses the availability and quality of pressure injury related equipment and standards for its use." ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Pressure injury related equipment includes preventive equipment (e.g., pressure redistribution support surfaces, repositioning devices and wound care supplies) that is of a quality appropriate for its use based on relevant equipment standards and testing protocols." .
+
+
+###  http://example.org/PI#QI07
+PI:QI07 rdf:type owl:NamedIndividual ,
+                 PI:Structure_Quality_Indicators ;
+        PI:has_guideline PI:QRG20.08 ;
+        rdfs:comment "The organization provides clinical decision support tools to support pressure injury prevention." ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Clinical decision support tools may include computer-generated reports, risk assessment decision support protocols, support surface algorithms, and other technology-based tools integrated into the electronic health record." .
+
+
+###  http://example.org/PI#QI08
+PI:QI08 rdf:type owl:NamedIndividual ,
+                 PI:Structure_Quality_Indicators ;
+        PI:has_guideline PI:QRG20.09 ;
+        rdfs:comment "A specialized health professional is available to support pressure injury prevention and treatment." ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Identification and delegation of a wound expert clinical leader to lead and support pressure injury prevention and treatment." .
+
+
+###  http://example.org/PI#QI09
+PI:QI09 rdf:type owl:NamedIndividual ,
+                 PI:Process_Quality_Indicators ;
+        PI:has_guideline PI:QRG01.21 ,
+                         PI:QRG01.22 ,
+                         PI:QRG01.23 ;
+        rdfs:comment "Every individual is assessed for pressure injury risk as soon as possible after admission/transfer and periodically thereafter and the assessment is documented in the medical record." ;
+        <http://www.w3.org/2004/02/skos/core#definition> "The risk for developing a pressure injury is determined using a structured approach that incorporates assessment of the multiple epidemiological factors that increase the risk of pressure injury development and clinical judgment." .
+
+
+###  http://example.org/PI#QI10
+PI:QI10 rdf:type owl:NamedIndividual ,
+                 PI:Process_Quality_Indicators ;
+        PI:has_guideline PI:QRG02.01 ;
+        rdfs:comment "Every individual has received a comprehensive skin assessment as soon as possible after admission/transfer and periodically thereafter as indicated and the assessment is documented in the medical record." ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Alterations to skin integrity provide an indication of pressure injury risk. A comprehensive head-to-toe skin assessment identifies any existing pressure injuries and contributes to a risk assessment." .
+
+
+###  http://example.org/PI#QI11
+PI:QI11 rdf:type owl:NamedIndividual ,
+                 PI:Process_Quality_Indicators ;
+        PI:has_guideline PI:QRG01.24 ;
+        rdfs:comment "An individualized risk-based pressure injury prevention plan is developed, documented, implemented and modified in response to change in risk status for every individual at risk of, or with, pressure injuries." ;
+        <http://www.w3.org/2004/02/skos/core#definition> "An individualized risk-based pressure injury prevention plan should consider, at a minimum, the individual’s specific pressure injury risk factors, nutrition, repositioning, pressure redistribution support surfaces, and topical skin care. The plan should be consistent with the individual’s goals and wishes. The risks and benefits of pressure injury prevention should be explained to the individual and/or family so that informed decisions can be made." .
+
+
+###  http://example.org/PI#QI12
+PI:QI12 rdf:type owl:NamedIndividual ,
+                 PI:Process_Quality_Indicators ;
+        PI:has_guideline PI:QRG10.01 ;
+        rdfs:comment "An assessment of the individual is documented for individuals with a pressure injury." ;
+        <http://www.w3.org/2004/02/skos/core#definition> "A comprehensive assessment must meet the criteria as described in Recommendation 10.1 in this guideline." .
+
+
+###  http://example.org/PI#QI13
+PI:QI13 rdf:type owl:NamedIndividual ,
+                 PI:Process_Quality_Indicators ;
+        PI:has_guideline PI:QRG10.04 ,
+                         PI:QRG10.05 ,
+                         PI:QRG10.06 ,
+                         PI:QRG10.07 ;
+        rdfs:comment "Pressure injuries are assessed and the findings are documented at least once a week to monitor progress toward healing." ;
+        <http://www.w3.org/2004/02/skos/core#definition> "A pressure injury evaluation consists of: 1 Assessment of pressure injury characteristics as outlined in Recommendation 10.4 to 10.6; 2  A uniform and consistent method of measuring pressure injury size and surface area to facilitate meaningful monitoring of the pressure injury healing over time; 3 The use of a pressure injury assessment tool that has been tested for validity and reliability." .
+
+
+###  http://example.org/PI#QI14
+PI:QI14 rdf:type owl:NamedIndividual ,
+                 PI:Process_Quality_Indicators ;
+        PI:has_guideline PI:QRG10.02 ;
+        rdfs:comment "An individualized treatment plan and its goal, is available for each individual with a pressure injury." ;
+        <http://www.w3.org/2004/02/skos/core#definition> "The treatment plan should be developed using a multidisciplinary approach and should include pressure injury treatment, nutrition, pain management, pressure relief and redistribution, and education. Treatment goals should be consistent with patient values and goals." .
+
+
+###  http://example.org/PI#QI15
+PI:QI15 rdf:type owl:NamedIndividual ,
+                 PI:Process_Quality_Indicators ;
+        PI:has_guideline PI:QRG11.01 ,
+                         PI:QRG11.02 ,
+                         PI:QRG11.03 ,
+                         PI:QRG11.04 ,
+                         PI:QRG11.05 ,
+                         PI:QRG11.06 ;
+        rdfs:comment "Every individual with a pressure injury has a documented comprehensive pain assessment and where applicable, a pain management plan." ;
+        <http://www.w3.org/2004/02/skos/core#definition> "A pain assessment is conducted using an appropriate valid and reliable scale that considers non-verbal expression of pain. An evidence-based treatment plan is developed and documented for individuals who experience pain." .
+
+
+###  http://example.org/PI#QI16
+PI:QI16 rdf:type owl:NamedIndividual ,
+                 PI:Process_Quality_Indicators ;
+        PI:has_guideline PI:QRG04.01 ,
+                         PI:QRG04.02 ,
+                         PI:QRG04.03 ,
+                         PI:QRG04.04 ,
+                         PI:QRG04.05 ,
+                         PI:QRG04.06 ,
+                         PI:QRG04.07 ,
+                         PI:QRG04.08 ,
+                         PI:QRG04.09 ,
+                         PI:QRG04.10 ,
+                         PI:QRG04.11 ,
+                         PI:QRG04.12 ,
+                         PI:QRG04.13 ,
+                         PI:QRG04.14 ,
+                         PI:QRG04.15 ;
+        rdfs:comment "Every individual at risk of a pressure injury receives nutritional screening and when applicable, a comprehensive nutritional assessment is conducted, and a nutrition care plan is documented." .
+
+
+###  http://example.org/PI#QI17
+PI:QI17 rdf:type owl:NamedIndividual ,
+                 PI:Process_Quality_Indicators ;
+        PI:has_guideline PI:QRG22.02 ;
+        rdfs:comment "Every individual with, or at risk of pressure injuries (and/or their informal caregiver) receives information about the prevention and treatment of pressure injuries, self-care skills training and psychosocial support." .
+
+
+###  http://example.org/PI#QI18
+PI:QI18 rdf:type owl:NamedIndividual ,
+                 PI:Process_Quality_Indicators ;
+        PI:has_guideline PI:QRG19.01 ,
+                         PI:QRG20.12 ;
+        rdfs:comment "Measurement of pressure injury rates is regularly conducted and reported to stakeholders." ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Prevalence and incidence studies should clearly report their methodological design. A rigorous and standardized methodology should be used to allow risk adjustment and benchmarking. The results should be communicated to all stakeholders using feedback loops. The method and frequency of pressure injury monitoring and reporting used within an organization may vary. Event reporting systems and electronic health recordbased dashboards can provide more immediate feedback. Some evaluation of pressure injury rates is encouraged on at least a monthly basis." .
+
+
+###  http://example.org/PI#QI19
+PI:QI19 rdf:type owl:NamedIndividual ,
+                 PI:Outcome_Quality_Indicators ;
+        PI:has_guideline PI:QRG09.01 ,
+                         PI:QRG09.02 ,
+                         PI:QRG09.03 ,
+                         PI:QRG19.01 ;
+        rdfs:comment "Percentage of individuals within the facility at a specific point in time with a pressure injury (point prevalence)." ;
+        <http://www.w3.org/2004/02/skos/core#definition> "See the guideline chapter Classification of Pressure Injuries for definitions of Categories/ Stages of pressure injuries." .
+
+
+###  http://example.org/PI#QI20
+PI:QI20 rdf:type owl:NamedIndividual ,
+                 PI:Outcome_Quality_Indicators ;
+        PI:has_guideline PI:QRG09.01 ,
+                         PI:QRG09.02 ,
+                         PI:QRG09.03 ,
+                         PI:QRG19.01 ;
+        rdfs:comment "Percentage of individuals who did not have a pressure injury on admission who acquire a pressure injury during their stay in the facility (facility-acquired rate)." ;
+        <http://www.w3.org/2004/02/skos/core#definition> "See the guideline chapter Classification of Pressure Injuries for definitions of Categories/ Stages of pressure injuries." .
+
+
+###  http://example.org/PI#QRG01.01
+PI:QRG01.01 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_A ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "Consider individuals with limited mobility, limited activity and a high potential for friction and shear to be at risk of pressure injuries." .
+
+
+###  http://example.org/PI#QRG01.02
+PI:QRG01.02 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_A ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "Consider individuals with a Category/Stage I pressure injury to be at risk of developing a Category/Stage II or greater pressure injury." .
+
+
+###  http://example.org/PI#QRG01.03
+PI:QRG01.03 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_C ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Consider the potential impact of an existing pressure injury of any Category/Stage on development of additional pressure injuries." .
+
+
+###  http://example.org/PI#QRG01.04
+PI:QRG01.04 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Consider the potential impact of a previous pressure injury on additional pressure injury development." .
+
+
+###  http://example.org/PI#QRG01.05
+PI:QRG01.05 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Consider the potential impact of alterations to skin status over pressure points on pressure injury risk." .
+
+
+###  http://example.org/PI#QRG01.06
+PI:QRG01.06 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Consider the potential impact of pain at pressure points on pressure injury risk." .
+
+
+###  http://example.org/PI#QRG01.07
+PI:QRG01.07 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_A ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "Consider the impact of diabetes mellitus on the risk of pressure injuries." .
+
+
+###  http://example.org/PI#QRG01.08
+PI:QRG01.08 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Consider the impact of perfusion and circulation deficits on the risk of pressure injuries." .
+
+
+###  http://example.org/PI#QRG01.09
+PI:QRG01.09 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_C ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Consider the impact of oxygenation deficits on the risk of pressure injuries." .
+
+
+###  http://example.org/PI#QRG01.10
+PI:QRG01.10 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_C ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Consider at the impact of impaired nutritional status on the risk of pressure injuries." .
+
+
+###  http://example.org/PI#QRG01.11
+PI:QRG01.11 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_C ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Consider the potential impact of moist skin on the risk of pressure injuries." .
+
+
+###  http://example.org/PI#QRG01.12
+PI:QRG01.12 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Consider the impact of increased body temperature on the risk of pressure injuries." .
+
+
+###  http://example.org/PI#QRG01.13
+PI:QRG01.13 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_C ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Consider the potential impact of older age on the risk of pressure injuries." .
+
+
+###  http://example.org/PI#QRG01.14
+PI:QRG01.14 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_C ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Consider the potential impact of impaired sensory perception on the risk of pressure injuries." .
+
+
+###  http://example.org/PI#QRG01.15
+PI:QRG01.15 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_C ;
+            PI:has_recommendation PI:SOR_No_recommendation ;
+            rdfs:comment "Consider the potential impact of laboratory blood test results on the risk of pressure injuries." .
+
+
+###  http://example.org/PI#QRG01.16
+PI:QRG01.16 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Consider the potential impact of general and mental health status on pressure injury risk." .
+
+
+###  http://example.org/PI#QRG01.17
+PI:QRG01.17 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Consider the impact of time spent immobilized before surgery, the duration of surgery and the American Society of Anesthesiologists (ASA) Physical Status Classification on surgery-related pressure injury risk." .
+
+
+###  http://example.org/PI#QRG01.18
+PI:QRG01.18 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Consider the following as additional risk factors for the development pressure injuries in critically ill individuals:  * Duration of critical care stay * Mechanical ventilation * Use of vasopressors * Acute Physiology and Chronic Health Evaluation (APACHE II) score" .
+
+
+###  http://example.org/PI#QRG01.19
+PI:QRG01.19 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "Consider the impact of skin maturity, perfusion and oxygenation, and presence of a medical device on pressure injury risk in neonates and children." .
+
+
+###  http://example.org/PI#QRG01.20
+PI:QRG01.20 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Consider the impact of illness severity and the duration of critical care unit stay on pressure injury risk in neonates and children" .
+
+
+###  http://example.org/PI#QRG01.21
+PI:QRG01.21 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Conduct a pressure injury risk screening as soon as possible after admission to the care service and periodically thereafter to identify individuals at risk of developing pressure injuries." .
+
+
+###  http://example.org/PI#QRG01.22
+PI:QRG01.22 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Conduct a full pressure injury risk assessment as guided by the screening outcome after admission and after any change in status." .
+
+
+###  http://example.org/PI#QRG01.23
+PI:QRG01.23 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Develop and implement a risk-based prevention plan for individuals identified as being at risk of developing pressure injuries." .
+
+
+###  http://example.org/PI#QRG01.24
+PI:QRG01.24 rdf:type owl:NamedIndividual ,
+                     PI:CH1_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "When conducting a pressure injury risk assessment: • Use a structured approach • Include a comprehensive skin assessment • Supplement use of a risk assessment tool with assessment of additional risk factors • Interpret the assessment outcomes using clinical judgment." .
+
+
+###  http://example.org/PI#QRG02.01
+PI:QRG02.01 rdf:type owl:NamedIndividual ,
+                     PI:CH2_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Conduct a comprehensive skin and tissue assessment for all individuals at risk of pressure injuries: • As soon as possible after admission/transfer to the healthcare service • As a part of every risk assessment • Periodically as indicated by the individual’s degree of pressure injury risk • Prior to discharge from the care service" .
+
+
+###  http://example.org/PI#QRG02.02
+PI:QRG02.02 rdf:type owl:NamedIndividual ,
+                     PI:CH2_Guideline ;
+            PI:has_evidence PI:SOE_A ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "Inspect the skin of individuals at risk of pressure injuries to identify presence of erythema." .
+
+
+###  http://example.org/PI#QRG02.03
+PI:QRG02.03 rdf:type owl:NamedIndividual ,
+                     PI:CH2_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "Differentiate blanchable from non-blanchable erythema using either finger pressure or the transparent disk method and evaluate the extent of erythema." .
+
+
+###  http://example.org/PI#QRG02.04
+PI:QRG02.04 rdf:type owl:NamedIndividual ,
+                     PI:CH2_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Assess the temperature of skin and soft tissue" .
+
+
+###  http://example.org/PI#QRG02.05
+PI:QRG02.05 rdf:type owl:NamedIndividual ,
+                     PI:CH2_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Assess edema and assess for change in tissue consistency in relation to surrounding tissues" .
+
+
+###  http://example.org/PI#QRG02.06
+PI:QRG02.06 rdf:type owl:NamedIndividual ,
+                     PI:CH2_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_No_recommendation ;
+            rdfs:comment "Consider using a sub-epidermal moisture/ edema measurement device as an adjunct to routine clinical skin assessment" .
+
+
+###  http://example.org/PI#QRG02.07
+PI:QRG02.07 rdf:type owl:NamedIndividual ,
+                     PI:CH2_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "When assessing darkly pigmented skin, consider assessment of skin temperature and sub-epidermal moisture as important adjunct assessment strategies." .
+
+
+###  http://example.org/PI#QRG02.08
+PI:QRG02.08 rdf:type owl:NamedIndividual ,
+                     PI:CH2_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_No_recommendation ;
+            rdfs:comment "Evaluate the relevance of performing an objective assessment of skin tone using a color chart when conducting a skin assessment." .
+
+
+###  http://example.org/PI#QRG03.01
+PI:QRG03.01 rdf:type owl:NamedIndividual ,
+                     PI:CH3_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "Implement a skin care regimen that includes: • Keeping the skin clean and appropriately hydrated • Cleansing the skin promptly after episodes of incontinence • Avoiding use of alkaline soaps and cleansers • Protecting the skin from moisture with a barrier product." .
+
+
+###  http://example.org/PI#QRG03.02
+PI:QRG03.02 rdf:type owl:NamedIndividual ,
+                     PI:CH3_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Avoid vigorously rubbing skin that is at risk of pressure injuries." .
+
+
+###  http://example.org/PI#QRG03.03
+PI:QRG03.03 rdf:type owl:NamedIndividual ,
+                     PI:CH3_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Use high absorbency incontinence products to protect the skin in individuals with or at risk of pressure injuries who have urinary incontinence." .
+
+
+###  http://example.org/PI#QRG03.04
+PI:QRG03.04 rdf:type owl:NamedIndividual ,
+                     PI:CH3_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Consider using textiles with low friction coefficients for individuals with or at risk of pressure injuries." .
+
+
+###  http://example.org/PI#QRG03.05
+PI:QRG03.05 rdf:type owl:NamedIndividual ,
+                     PI:CH3_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Use a soft silicone multi-layered foam dressing to protect the skin for individuals at risk of pressure injuries." .
+
+
+###  http://example.org/PI#QRG04.01
+PI:QRG04.01 rdf:type owl:NamedIndividual ,
+                     PI:CH4_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "Conduct nutritional screening for individuals at risk of a pressure injury." .
+
+
+###  http://example.org/PI#QRG04.02
+PI:QRG04.02 rdf:type owl:NamedIndividual ,
+                     PI:CH4_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "Conduct a comprehensive nutrition assessment for adults at risk of a pressure injury who are screened to be at risk of malnutrition and for all adults with a pressure injury." .
+
+
+###  http://example.org/PI#QRG04.03
+PI:QRG04.03 rdf:type owl:NamedIndividual ,
+                     PI:CH4_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "Develop and implement an individualized nutrition care plan for individuals with, or at risk of, a pressure injury who are malnourished or who are at risk of malnutrition." .
+
+
+###  http://example.org/PI#QRG04.04
+PI:QRG04.04 rdf:type owl:NamedIndividual ,
+                     PI:CH4_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Optimize energy intake for individuals at risk of pressure injuries who are malnourished or at risk of malnutrition." .
+
+
+###  http://example.org/PI#QRG04.05
+PI:QRG04.05 rdf:type owl:NamedIndividual ,
+                     PI:CH4_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Adjust protein intake for individuals at risk of pressure injuries who are malnourished or at risk of malnutrition." .
+
+
+###  http://example.org/PI#QRG04.06
+PI:QRG04.06 rdf:type owl:NamedIndividual ,
+                     PI:CH4_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Provide 30 to 35 kcalories/kg body weight/ day for adults with a pressure injury who are malnourished or at risk of malnutrition." .
+
+
+###  http://example.org/PI#QRG04.07
+PI:QRG04.07 rdf:type owl:NamedIndividual ,
+                     PI:CH4_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "Provide 1.2 to 1.5 g protein/kg body weight/ day for adults with a pressure injury who are malnourished or at risk of malnutrition." .
+
+
+###  http://example.org/PI#QRG04.08
+PI:QRG04.08 rdf:type owl:NamedIndividual ,
+                     PI:CH4_Guideline ;
+            PI:has_evidence PI:SOE_C ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Offer high-calorie, high-protein fortified foods and/or nutritional supplements in addition to the usual diet for adults who are at risk of developing a pressure injury and who are also malnourished or at risk of malnutrition, if nutritional requirements cannot be achieved by normal dietary intake." .
+
+
+###  http://example.org/PI#QRG04.09
+PI:QRG04.09 rdf:type owl:NamedIndividual ,
+                     PI:CH4_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "Offer high calorie, high protein nutritional supplements in addition to the usual diet for adults with a pressure injury who are malnourished or at risk of malnutrition, if nutritional requirements cannot be achieved by normal dietary intake." .
+
+
+###  http://example.org/PI#QRG04.10
+PI:QRG04.10 rdf:type owl:NamedIndividual ,
+                     PI:CH4_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Provide high-calorie, high-protein, arginine, zinc and antioxidant oral nutritional supplements or enteral formula for adults with a Category/Stage II or greater pressure injury who are malnourished or at risk of malnutrition." .
+
+
+###  http://example.org/PI#QRG04.11
+PI:QRG04.11 rdf:type owl:NamedIndividual ,
+                     PI:CH4_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Discuss the benefits and harms of enteral or parenteral feeding to support overall health in light of preferences and goals of care with individuals at risk of pressure injuries who cannot meet their nutritional requirements through oral intake despite nutritional interventions." .
+
+
+###  http://example.org/PI#QRG04.12
+PI:QRG04.12 rdf:type owl:NamedIndividual ,
+                     PI:CH4_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Discuss the benefits and harms of enteral or parenteral feeding to support pressure injury treatment in light of preferences and goals of care for individuals with pressure injuries who cannot meet their nutritional requirements through oral intake despite nutritional interventions." .
+
+
+###  http://example.org/PI#QRG04.13
+PI:QRG04.13 rdf:type owl:NamedIndividual ,
+                     PI:CH4_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Provide and encourage adequate water/fluid intake for hydration for an individual with or at risk of a pressure injury, when compatible with goals of care and clinical conditions." .
+
+
+###  http://example.org/PI#QRG04.14
+PI:QRG04.14 rdf:type owl:NamedIndividual ,
+                     PI:CH4_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Conduct age appropriate nutritional screening and assessment for neonates and children at risk of pressure injuries." .
+
+
+###  http://example.org/PI#QRG04.15
+PI:QRG04.15 rdf:type owl:NamedIndividual ,
+                     PI:CH4_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "For neonates and children with or at risk of pressure injuries who have inadequate oral intake, consider fortified foods, age appropriate nutritional supplements, or enteral or parenteral nutritional support." .
+
+
+###  http://example.org/PI#QRG05.01
+PI:QRG05.01 rdf:type owl:NamedIndividual ,
+                     PI:CH5_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "Reposition all individuals with or at risk of pressure injuries on an individualized schedule, unless contraindicated." .
+
+
+###  http://example.org/PI#QRG05.02
+PI:QRG05.02 rdf:type owl:NamedIndividual ,
+                     PI:CH5_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "Determine repositioning frequency with consideration to the individual’s level of activity, mobility and ability to independently reposition." .
+
+
+###  http://example.org/PI#QRG05.03
+PI:QRG05.03 rdf:type owl:NamedIndividual ,
+                     PI:CH5_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Determine repositioning frequency with consideration to the individual’s: •  Skin and tissue tolerance •  General medical condition •  Overall treatment objectives •  Comfort and pain" .
+
+
+###  http://example.org/PI#QRG05.04
+PI:QRG05.04 rdf:type owl:NamedIndividual ,
+                     PI:CH5_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Implement repositioning reminder strategies to promote adherence to repositioning regimens." .
+
+
+###  http://example.org/PI#QRG05.05
+PI:QRG05.05 rdf:type owl:NamedIndividual ,
+                     PI:CH5_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Reposition the individual in such a way that optimal offloading of all bony prominences and maximum redistribution of pressure is achieved." .
+
+
+###  http://example.org/PI#QRG05.06
+PI:QRG05.06 rdf:type owl:NamedIndividual ,
+                     PI:CH5_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Reposition the individual to relieve or redistribute pressure using manual handling techniques and equipment that reduce friction and shear." .
+
+
+###  http://example.org/PI#QRG05.07
+PI:QRG05.07 rdf:type owl:NamedIndividual ,
+                     PI:CH5_Guideline ;
+            PI:has_evidence PI:SOE_C ;
+            PI:has_recommendation PI:SOR_No_recommendation ;
+            rdfs:comment "Consider using continuous bedside pressure mapping as a visual cue to guide repositioning." .
+
+
+###  http://example.org/PI#QRG05.08
+PI:QRG05.08 rdf:type owl:NamedIndividual ,
+                     PI:CH5_Guideline ;
+            PI:has_evidence PI:SOE_C ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Use the 30° lateral side lying position in preference to the 90° side lying position when positioning." .
+
+
+###  http://example.org/PI#QRG05.09
+PI:QRG05.09 rdf:type owl:NamedIndividual ,
+                     PI:CH5_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_No_recommendation ;
+            rdfs:comment "Keep the head of bed as flat as possible." .
+
+
+###  http://example.org/PI#QRG05.10
+PI:QRG05.10 rdf:type owl:NamedIndividual ,
+                     PI:CH5_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_No_recommendation ;
+            rdfs:comment "Avoid extended use of prone positioning unless required for management of the individual’s medical condition." .
+
+
+###  http://example.org/PI#QRG05.11
+PI:QRG05.11 rdf:type owl:NamedIndividual ,
+                     PI:CH5_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Promote seating out of bed in an appropriate chair or wheelchair for limited periods of time." .
+
+
+###  http://example.org/PI#QRG05.12
+PI:QRG05.12 rdf:type owl:NamedIndividual ,
+                     PI:CH5_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Select a reclined seated position with the individual’s legs elevated. If reclining is not appropriate or possible, ensure that the individual’s feet are well-supported on the floor or on footrests when sitting upright in a chair or wheelchair" .
+
+
+###  http://example.org/PI#QRG05.13
+PI:QRG05.13 rdf:type owl:NamedIndividual ,
+                     PI:CH5_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Tilt the seat to prevent the individual sliding forward in the chair or wheelchair." .
+
+
+###  http://example.org/PI#QRG05.14
+PI:QRG05.14 rdf:type owl:NamedIndividual ,
+                     PI:CH5_Guideline ;
+            PI:has_evidence PI:SOE_C ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Teach and encourage individuals who spend prolonged durations in a seated position to perform pressure relieving maneuvers." .
+
+
+###  http://example.org/PI#QRG05.15
+PI:QRG05.15 rdf:type owl:NamedIndividual ,
+                     PI:CH5_Guideline ;
+            PI:has_evidence PI:SOE_C ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Implement an early mobilization program that increases activity and mobility as rapidly as tolerated." .
+
+
+###  http://example.org/PI#QRG05.16
+PI:QRG05.16 rdf:type owl:NamedIndividual ,
+                     PI:CH5_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "For individuals with an ischial or sacral pressure injury, evaluate the benefit of periods of bed rest in promoting healing versus the risk of new or worsening pressure injuries and the impact on lifestyle, physical and emotional health." .
+
+
+###  http://example.org/PI#QRG05.17
+PI:QRG05.17 rdf:type owl:NamedIndividual ,
+                     PI:CH5_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Reposition unstable critically ill individuals who can be repositioned using slow, gradual turns to allow time for stabilization of hemodynamic and oxygenation status." .
+
+
+###  http://example.org/PI#QRG05.18
+PI:QRG05.18 rdf:type owl:NamedIndividual ,
+                     PI:CH5_Guideline ;
+            PI:has_evidence PI:SOE_C ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Initiate frequent small shifts in body position for critically ill individuals who are too unstable to maintain a regular repositioning schedule, and to supplement regular repositioning." .
+
+
+###  http://example.org/PI#QRG05.19
+PI:QRG05.19 rdf:type owl:NamedIndividual ,
+                     PI:CH5_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Position the individual in such a way as to reduce the risk of pressure injury development during surgery by distributing pressure over a larger body surface area and offloading bony prominences." .
+
+
+###  http://example.org/PI#QRG06.01
+PI:QRG06.01 rdf:type owl:NamedIndividual ,
+                     PI:CH6_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "Assess the vascular/perfusion status of the lower limbs, heels and feet when performing a skin and tissue assessment, and as part of a risk assessment." .
+
+
+###  http://example.org/PI#QRG06.02
+PI:QRG06.02 rdf:type owl:NamedIndividual ,
+                     PI:CH6_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "For individuals at risk of heel pressure injuries and/or with Category/Stage I or II pressure injuries, elevate the heels using a specifically designed heel suspension device or a pillow/ foam cushion. Offload the heel completely in such a way as to distribute the weight of the leg along the calf without placing pressure on the Achilles tendon and the popliteal vein." .
+
+
+###  http://example.org/PI#QRG06.03
+PI:QRG06.03 rdf:type owl:NamedIndividual ,
+                     PI:CH6_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "For individuals with a Category/Stage III or greater heel pressure injury, elevate the heels using a specifically designed heel suspension device offloading the heel completely in such a way as to distribute the weight of the leg along the calf without placing pressure on the Achilles tendon and the popliteal vein." .
+
+
+###  http://example.org/PI#QRG06.04
+PI:QRG06.04 rdf:type owl:NamedIndividual ,
+                     PI:CH6_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Use a prophylactic dressing as an adjunct to heel offloading and other strategies to prevent heel pressure injuries." .
+
+
+###  http://example.org/PI#QRG07.01
+PI:QRG07.01 rdf:type owl:NamedIndividual ,
+                     PI:CH7_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Select a support surface that meets the individual’s need for pressure redistribution based on the following factors: • Level of immobility and inactivity • Need to influence microclimate control and shear reduction • Size and weight of the individual • Number, severity and location of existing pressure injuries • Risk for developing new pressure injuries." .
+
+
+###  http://example.org/PI#QRG07.02
+PI:QRG07.02 rdf:type owl:NamedIndividual ,
+                     PI:CH7_Guideline ;
+            PI:has_evidence PI:SOE_C ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Ensure that the bed surface area is sufficiently wide to allow turning of the individual without contact with the bed rails." .
+
+
+###  http://example.org/PI#QRG07.03
+PI:QRG07.03 rdf:type owl:NamedIndividual ,
+                     PI:CH7_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "For individuals with obesity, select a support surface with enhanced pressure redistribution, shear reduction and microclimate features." .
+
+
+###  http://example.org/PI#QRG07.04
+PI:QRG07.04 rdf:type owl:NamedIndividual ,
+                     PI:CH7_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Use a high specification reactive single layer foam mattress or overlay in preference to a foam mattress without high specification qualities for individuals at risk of developing pressure injuries." .
+
+
+###  http://example.org/PI#QRG07.05
+PI:QRG07.05 rdf:type owl:NamedIndividual ,
+                     PI:CH7_Guideline ;
+            PI:has_evidence PI:SOE_C ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Consider using a reactive air mattress or overlay for individuals at risk for developing pressure injuries." .
+
+
+###  http://example.org/PI#QRG07.06
+PI:QRG07.06 rdf:type owl:NamedIndividual ,
+                     PI:CH7_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_No_recommendation ;
+            rdfs:comment "Assess the relative benefits of using a medical grade sheepskin for individuals at risk of developing pressure injuries." .
+
+
+###  http://example.org/PI#QRG07.07
+PI:QRG07.07 rdf:type owl:NamedIndividual ,
+                     PI:CH7_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Assess the relative benefits of using an alternating pressure air mattress or overlay for individuals at risk of pressure   injuries." .
+
+
+###  http://example.org/PI#QRG07.08
+PI:QRG07.08 rdf:type owl:NamedIndividual ,
+                     PI:CH7_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Use a pressure redistribution support surface on the operating table for all individuals with or at risk of pressure injuries who are undergoing surgery." .
+
+
+###  http://example.org/PI#QRG07.09
+PI:QRG07.09 rdf:type owl:NamedIndividual ,
+                     PI:CH7_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "For individuals with a pressure injury, consider changing to a specialty support surface when the individual: • Cannot be positioned off the existing pressure injury • Has pressure injuries on two or more turning surfaces (e.g., the sacrum and trochanter) that limit repositioning options • Has a pressure injury that fails to heal or the pressure injury deteriorates despite appropriate comprehensive care • Is at high risk for additional pressure injuries • Has undergone flap or graft surgery • Is uncomfortable •  ‘Bottoms out’ on the current support surface" .
+
+
+###  http://example.org/PI#QRG07.10
+PI:QRG07.10 rdf:type owl:NamedIndividual ,
+                     PI:CH7_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Assess the relative benefits of using an air fluidized bed to facilitate healing while reducing skin temperature and excess hydration for individuals with Category/Stage III or IV pressure injuries." .
+
+
+###  http://example.org/PI#QRG07.11
+PI:QRG07.11 rdf:type owl:NamedIndividual ,
+                     PI:CH7_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Select a seat and seating support surface that meets the individual’s need for pressure redistribution with consideration to: • Body size and configuration  • Effects of posture and deformity on pressure distribution • Mobility and lifestyle needs." .
+
+
+###  http://example.org/PI#QRG07.12
+PI:QRG07.12 rdf:type owl:NamedIndividual ,
+                     PI:CH7_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Use a pressure redistribution cushion for preventing pressure injuries in people at high risk who are seated in a chair/wheelchair for prolonged periods, particularly if the individual is unable to perform pressure relieving maneuvers." .
+
+
+###  http://example.org/PI#QRG07.13
+PI:QRG07.13 rdf:type owl:NamedIndividual ,
+                     PI:CH7_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Assess the relative benefits of using an alternating pressure air cushion for supporting pressure injury healing in individuals who are seated in a chair/wheelchair for prolonged periods, particularly if the individual is unable to perform pressure relieving maneuvers." .
+
+
+###  http://example.org/PI#QRG07.14
+PI:QRG07.14 rdf:type owl:NamedIndividual ,
+                     PI:CH7_Guideline ;
+            PI:has_evidence PI:SOE_C ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Use a bariatric pressure redistribution cushion designed for individuals with obesity on seated surfaces." .
+
+
+###  http://example.org/PI#QRG07.15
+PI:QRG07.15 rdf:type owl:NamedIndividual ,
+                     PI:CH7_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "For individuals with or at risk for a pressure injury, consider using a pressure redistributing support surface during transit." .
+
+
+###  http://example.org/PI#QRG07.16
+PI:QRG07.16 rdf:type owl:NamedIndividual ,
+                     PI:CH7_Guideline ;
+            PI:has_evidence PI:SOE_C ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Transfer the individual off a spinal hardboard/ backboard as soon as feasible after admission to an acute care facility in consultation with a qualified health professional." .
+
+
+###  http://example.org/PI#QRG08.01
+PI:QRG08.01 rdf:type owl:NamedIndividual ,
+                     PI:CH8_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "To reduce the risk of medical device related pressure injuries, review and select medical devices with consideration to: • The device’s ability to minimize tissue damage • Correct sizing/shape of the device for the individual • Ability to correctly apply the device according to manufacturer’s instructions • Ability to correctly secure the device." .
+
+
+###  http://example.org/PI#QRG08.02
+PI:QRG08.02 rdf:type owl:NamedIndividual ,
+                     PI:CH8_Guideline ;
+            PI:has_evidence PI:SOE_C ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Regularly monitor the tension of medical device securements and where possible seek the individual’s self-assessment of comfort." .
+
+
+###  http://example.org/PI#QRG08.03
+PI:QRG08.03 rdf:type owl:NamedIndividual ,
+                     PI:CH8_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Assess the skin under and around medical devices for signs of pressure related injury as part of routine skin assessment." .
+
+
+###  http://example.org/PI#QRG08.04
+PI:QRG08.04 rdf:type owl:NamedIndividual ,
+                     PI:CH8_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Reduce and/or redistribute pressure at the skindevice interface by: • Regularly rotating or repositioning the medical device and/or the individual • Providing physical support for medical devices in order to minimize pressure and shear • Removing medical devices as soon as medically feasible." .
+
+
+###  http://example.org/PI#QRG08.05
+PI:QRG08.05 rdf:type owl:NamedIndividual ,
+                     PI:CH8_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Use a prophylactic dressing beneath a medical device to reduce the risk of medical device related pressure injuries" .
+
+
+###  http://example.org/PI#QRG08.06
+PI:QRG08.06 rdf:type owl:NamedIndividual ,
+                     PI:CH8_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "If appropriate and safe, alternate the oxygen delivery device between correctly fitting mask and nasal prongs to reduce the severity of nasal and facial pressure injuries for neonates receiving oxygen therapy." .
+
+
+###  http://example.org/PI#QRG08.07
+PI:QRG08.07 rdf:type owl:NamedIndividual ,
+                     PI:CH8_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "If appropriate and safe, alternate the oxygen delivery between correctly-fitting mask(s) and nasal prongs to reduce the severity of nasal and facial pressure injuries for older children and adults receiving oxygen therapy" .
+
+
+###  http://example.org/PI#QRG08.08
+PI:QRG08.08 rdf:type owl:NamedIndividual ,
+                     PI:CH8_Guideline ;
+            PI:has_evidence PI:SOE_C ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "In consultation with a qualified health professional, replace an extrication cervical collar with an acute care rigid collar as soon as feasible and remove cervical collars as soon as possible as indicate by clinical condition." .
+
+
+###  http://example.org/PI#QRG09.01
+PI:QRG09.01 rdf:type owl:NamedIndividual ,
+                     PI:CH9_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Differentiate pressure injuries from other types of wounds." .
+
+
+###  http://example.org/PI#QRG09.02
+PI:QRG09.02 rdf:type owl:NamedIndividual ,
+                     PI:CH9_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Use a pressure injury classification system to classify and document the level of tissue loss." .
+
+
+###  http://example.org/PI#QRG09.03
+PI:QRG09.03 rdf:type owl:NamedIndividual ,
+                     PI:CH9_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Verify that there is clinical agreement in pressure injury classification amongst the health professionals responsible for classifying pressure injuries." .
+
+
+###  http://example.org/PI#QRG10.01
+PI:QRG10.01 rdf:type owl:NamedIndividual ,
+                     PI:CH10_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Conduct a comprehensive initial assessment of the individual with a pressure injury." .
+
+
+###  http://example.org/PI#QRG10.02
+PI:QRG10.02 rdf:type owl:NamedIndividual ,
+                     PI:CH10_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Set treatment goals consistent with the value and goals of the individual, with input from the individual’s informal caregivers, and develop a treatment plan that supports these values and goals." .
+
+
+###  http://example.org/PI#QRG10.03
+PI:QRG10.03 rdf:type owl:NamedIndividual ,
+                     PI:CH10_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "Conduct a comprehensive reassessment of the individual if the pressure injury does not show some signs of healing within two weeks despite appropriate local wound care, pressure redistribution, and nutrition." .
+
+
+###  http://example.org/PI#QRG10.04
+PI:QRG10.04 rdf:type owl:NamedIndividual ,
+                     PI:CH10_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Assess the pressure injury initially and re-assess at least weekly to monitor progress toward healing." .
+
+
+###  http://example.org/PI#QRG10.05
+PI:QRG10.05 rdf:type owl:NamedIndividual ,
+                     PI:CH10_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "Select a uniform, consistent method for measuring pressure injury size and surface area to facilitate meaningful comparisons of wound measurements across time." .
+
+
+###  http://example.org/PI#QRG10.06
+PI:QRG10.06 rdf:type owl:NamedIndividual ,
+                     PI:CH10_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Assess the physical characteristics of the wound bed and the surrounding skin and soft tissue at each pressure injury assessment." .
+
+
+###  http://example.org/PI#QRG10.07
+PI:QRG10.07 rdf:type owl:NamedIndividual ,
+                     PI:CH10_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Monitor the pressure injury healing progress." .
+
+
+###  http://example.org/PI#QRG10.08
+PI:QRG10.08 rdf:type owl:NamedIndividual ,
+                     PI:CH10_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Consider using a validated tool to monitor pressure injury healing." .
+
+
+###  http://example.org/PI#QRG11.01
+PI:QRG11.01 rdf:type owl:NamedIndividual ,
+                     PI:CH11_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "Conduct a comprehensive pain assessment for individuals with a pressure injury." .
+
+
+###  http://example.org/PI#QRG11.02
+PI:QRG11.02 rdf:type owl:NamedIndividual ,
+                     PI:CH11_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Use non-pharmacological pain management strategies as a first line strategy and adjuvant therapy to reduce pain associated with pressure injuries." .
+
+
+###  http://example.org/PI#QRG11.03
+PI:QRG11.03 rdf:type owl:NamedIndividual ,
+                     PI:CH11_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Use repositioning techniques and equipment with consideration to preventing and managing pressure injury pain." .
+
+
+###  http://example.org/PI#QRG11.04
+PI:QRG11.04 rdf:type owl:NamedIndividual ,
+                     PI:CH11_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Use the principles of moist wound healing to reduce pressure injury pain." .
+
+
+###  http://example.org/PI#QRG11.05
+PI:QRG11.05 rdf:type owl:NamedIndividual ,
+                     PI:CH11_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_No_recommendation ;
+            rdfs:comment "Consider applying a topical opioid to manage acute pressure injury pain, if required and when there are no contraindications." .
+
+
+###  http://example.org/PI#QRG11.06
+PI:QRG11.06 rdf:type owl:NamedIndividual ,
+                     PI:CH11_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Administer analgesia regularly to control pressure injury pain." .
+
+
+###  http://example.org/PI#QRG12.01
+PI:QRG12.01 rdf:type owl:NamedIndividual ,
+                     PI:CH12_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Cleanse the pressure injury." .
+
+
+###  http://example.org/PI#QRG12.02
+PI:QRG12.02 rdf:type owl:NamedIndividual ,
+                     PI:CH12_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Use cleansing solutions with antimicrobials to clean pressure injuries with suspected or confirmed infection." .
+
+
+###  http://example.org/PI#QRG12.03
+PI:QRG12.03 rdf:type owl:NamedIndividual ,
+                     PI:CH12_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Cleanse the skin surrounding the pressure injury." .
+
+
+###  http://example.org/PI#QRG12.04
+PI:QRG12.04 rdf:type owl:NamedIndividual ,
+                     PI:CH12_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "Avoid disturbing stable, hard, dry eschar in ischemic limbs and heels, unless infection is suspected." .
+
+
+###  http://example.org/PI#QRG12.05
+PI:QRG12.05 rdf:type owl:NamedIndividual ,
+                     PI:CH12_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "Debride the pressure injury of devitalized tissue and suspected or confirmed biofilm and perform maintenance debridement until the wound bed is free of devitalized tissue and covered with granulation tissue." .
+
+
+###  http://example.org/PI#QRG13.01
+PI:QRG13.01 rdf:type owl:NamedIndividual ,
+                     PI:CH13_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_No_recommendation ;
+            rdfs:comment "Have a high index of suspicion of local infection in a pressure injury in the presence of: • Delayed healing • Lack of signs of healing in the preceding two weeks despite appropriate treatment • Larger size and/or depth • Wound breakdown/dehiscence • Necrotic tissue • Friable granulation tissue • Pocketing or bridging in the wound bed • Increased exudate, or change in the nature of the exudate • Increased warmth in the surrounding tissue • Increased pain • Malodor." .
+
+
+###  http://example.org/PI#QRG13.02
+PI:QRG13.02 rdf:type owl:NamedIndividual ,
+                     PI:CH13_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Have a high index of suspicion of biofilm in a pressure injury in the presence of: • Failure to heal despite appropriate antibiotic therapy • Recalcitrance to appropriate antimicrobial therapy • Delayed healing despite optimal treatment • Increased exudate • Increased poor granulation or friable hypergranulation • Low level erythema and/or low level chronic inflammation • Secondary signs of infection." .
+
+
+###  http://example.org/PI#QRG13.03
+PI:QRG13.03 rdf:type owl:NamedIndividual ,
+                     PI:CH13_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Consider a diagnosis of spreading infection if the individual with a pressure injury has local and/or systemic signs of acute infection including but not limited to: • Delay in healing • Erythema extending from the ulcer edge • Wound breakdown/dehiscence • Induration • Crepitus, fluctuance or discoloration of the surrounding skin • Lymphangitis • Malaise/lethargy • Confusion/delirium and anorexia (particularly in older adults)." .
+
+
+###  http://example.org/PI#QRG13.04
+PI:QRG13.04 rdf:type owl:NamedIndividual ,
+                     PI:CH13_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Determine presence of microbial bioburden in the pressure injury by tissue biopsy or semiquantitative swab technique and microscopy." .
+
+
+###  http://example.org/PI#QRG13.05
+PI:QRG13.05 rdf:type owl:NamedIndividual ,
+                     PI:CH13_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Determine presence of biofilm in the pressure injury by tissue biopsy and high resolution microscopy." .
+
+
+###  http://example.org/PI#QRG13.06
+PI:QRG13.06 rdf:type owl:NamedIndividual ,
+                     PI:CH13_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Evaluate the pressure injury for presence of osteomyelitis in the presence of exposed bone and/or if the bone feels rough or soft, or if the pressure injury has failed to heal with appropriate treatment." .
+
+
+###  http://example.org/PI#QRG13.07
+PI:QRG13.07 rdf:type owl:NamedIndividual ,
+                     PI:CH13_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Optimize potential for healing by: • Evaluating the individual’s nutritional status and addressing deficits • Evaluating the individual’s comorbidities and promoting disease control • Reducing the individual’s immunosuppressant therapy if possible • Preventing contamination of the pressure injury • Preparing the wound bed through cleansing and debridement." .
+
+
+###  http://example.org/PI#QRG13.08
+PI:QRG13.08 rdf:type owl:NamedIndividual ,
+                     PI:CH13_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Use topical antiseptics in tissue-appropriate strengths to control microbial burden and to promote healing in pressure injuries that have delayed healing." .
+
+
+###  http://example.org/PI#QRG13.09
+PI:QRG13.09 rdf:type owl:NamedIndividual ,
+                     PI:CH13_Guideline ;
+            PI:has_evidence PI:SOE_C ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Use topical antiseptics that are active against biofilm in tissue-appropriate strengths in conjunction with regular debridement to control and eradicate suspected (or confirmed) biofilm in pressure injuries with delayed healing." .
+
+
+###  http://example.org/PI#QRG13.10
+PI:QRG13.10 rdf:type owl:NamedIndividual ,
+                     PI:CH13_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Use systemic antibiotics to control and eradicate infection in individuals with pressure injuries and clinical evidence of systemic infection." .
+
+
+###  http://example.org/PI#QRG14.01
+PI:QRG14.01 rdf:type owl:NamedIndividual ,
+                     PI:CH14_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "For all pressure injuries, select the most appropriate wound dressing based on goals and self-care abilities of the individual and/or their informal caregiver and based on clinical assessment, including: • Diameter, shape and depth of the pressure injury • Need to address bacterial bioburden • Ability to keep the wound bed moist • Nature and volume of wound exudate • Condition of the tissue in the wound bed • Condition of the peri-wound skin • Presence of tunneling and/or undermining • Pain" .
+
+
+###  http://example.org/PI#QRG14.02
+PI:QRG14.02 rdf:type owl:NamedIndividual ,
+                     PI:CH14_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Evaluate the cost effectiveness of wound dressings at a local level, with consideration to direct and indirect costs to the health care system and to the individual with a pressure injury. Advanced wound dressings that promote moist wound healing are more likely to be cost-effective due to faster healing times and less frequent dressing changes." .
+
+
+###  http://example.org/PI#QRG14.03
+PI:QRG14.03 rdf:type owl:NamedIndividual ,
+                     PI:CH14_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Use hydrocolloid dressings for non-infected Category/Stage II pressure injuries as indicated by the clinical condition of the pressure injury." .
+
+
+###  http://example.org/PI#QRG14.04
+PI:QRG14.04 rdf:type owl:NamedIndividual ,
+                     PI:CH14_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Use hydrogel dressings for non-infected Category/Stage II pressure injuries as indicated by the clinical condition of the pressure injury." .
+
+
+###  http://example.org/PI#QRG14.05
+PI:QRG14.05 rdf:type owl:NamedIndividual ,
+                     PI:CH14_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Use polymeric dressings for non-infected Category/Stage II pressure injuries as indicated by the clinical condition of the pressure injury." .
+
+
+###  http://example.org/PI#QRG14.06
+PI:QRG14.06 rdf:type owl:NamedIndividual ,
+                     PI:CH14_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Use a hydrogel dressing for non-infected Category/Stage III and IV pressure injuries with minimal exudate." .
+
+
+###  http://example.org/PI#QRG14.07
+PI:QRG14.07 rdf:type owl:NamedIndividual ,
+                     PI:CH14_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Use calcium alginate dressings for Category/ Stage III and IV pressure injuries with moderate exudate." .
+
+
+###  http://example.org/PI#QRG14.08
+PI:QRG14.08 rdf:type owl:NamedIndividual ,
+                     PI:CH14_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Use foam dressings (including hydropolymers) for Category/Stage II and greater pressure injuries with moderate/heavy exudate." .
+
+
+###  http://example.org/PI#QRG14.09
+PI:QRG14.09 rdf:type owl:NamedIndividual ,
+                     PI:CH14_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Use super-absorbent wound dressings with a high capacity for absorption to manage heavily exuding pressure injuries." .
+
+
+###  http://example.org/PI#QRG14.10
+PI:QRG14.10 rdf:type owl:NamedIndividual ,
+                     PI:CH14_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_No_recommendation ;
+            rdfs:comment "Use moist gauze dressings to maintain an appropriately moist wound environment when advanced wound dressings are not an option." .
+
+
+###  http://example.org/PI#QRG14.11
+PI:QRG14.11 rdf:type owl:NamedIndividual ,
+                     PI:CH14_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_No_recommendation ;
+            rdfs:comment "Use a transparent film dressing as a secondary dressing when advanced wound dressings are not an option." .
+
+
+###  http://example.org/PI#QRG14.12
+PI:QRG14.12 rdf:type owl:NamedIndividual ,
+                     PI:CH14_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Consider the available evidence and guidance on using local resource wound dressings when selecting dressings in geographic regions with limited access to resources." .
+
+
+###  http://example.org/PI#QRG15.01
+PI:QRG15.01 rdf:type owl:NamedIndividual ,
+                     PI:CH15_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Consider applying collagen dressings to nonhealing pressure injuries to improve rate of healing and decrease signs and symptoms of wound inflammation." .
+
+
+###  http://example.org/PI#QRG16.01
+PI:QRG16.01 rdf:type owl:NamedIndividual ,
+                     PI:CH16_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_No_recommendation ;
+            rdfs:comment "Consider applying platelet-rich plasma for promoting healing in pressure injuries." .
+
+
+###  http://example.org/PI#QRG16.02
+PI:QRG16.02 rdf:type owl:NamedIndividual ,
+                     PI:CH16_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_No_recommendation ;
+            rdfs:comment "Consider applying platelet-derived growth factor for promoting healing in Category/Stage III and IV pressure injuries." .
+
+
+###  http://example.org/PI#QRG17.01
+PI:QRG17.01 rdf:type owl:NamedIndividual ,
+                     PI:CH17_Guideline ;
+            PI:has_evidence PI:SOE_A ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Administer pulsed current electrical stimulation to facilitate wound healing in recalcitrant Category/Stage II pressure injuries and Category/Stage III or IV pressure injuries." .
+
+
+###  http://example.org/PI#QRG17.02
+PI:QRG17.02 rdf:type owl:NamedIndividual ,
+                     PI:CH17_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_No_recommendation ;
+            rdfs:comment "Consider using non-contact low frequency ultrasound therapy as an adjunct therapy to facilitate healing in Category/Stage III and IV pressure injuries and suspected deep tissue injuries." .
+
+
+###  http://example.org/PI#QRG17.03
+PI:QRG17.03 rdf:type owl:NamedIndividual ,
+                     PI:CH17_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_No_recommendation ;
+            rdfs:comment "Consider using high frequency ultrasound therapy at 1MHz as an adjunct therapy to facilitate healing in Category/Stage III and IV pressure injuries." .
+
+
+###  http://example.org/PI#QRG17.04
+PI:QRG17.04 rdf:type owl:NamedIndividual ,
+                     PI:CH17_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Consider negative pressure wound therapy as an early adjunct therapy for reducing the size and depth of Category/Stage III and IV pressure injuries." .
+
+
+###  http://example.org/PI#QRG18.01
+PI:QRG18.01 rdf:type owl:NamedIndividual ,
+                     PI:CH18_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Obtain a surgical consultation for an individual with a pressure injury that: • Has advancing cellulitis or is a suspected source of sepsis • Has undermining, tunneling, sinus tracts and/or extensive necrotic tissue not easily removed by conservative debridement • Is Category/Stage III or IV and not closing with conservative treatment." .
+
+
+###  http://example.org/PI#QRG18.02
+PI:QRG18.02 rdf:type owl:NamedIndividual ,
+                     PI:CH18_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Consider the following factors when assessing eligibility for pressure injury surgery: • Likelihood of healing with non-surgical treatment versus surgical intervention • The individual’s goals of care • The individual’s clinical condition • Motivation and ability of the individual to comply with the treatment regimen •  Risk of surgery for the individual." .
+
+
+###  http://example.org/PI#QRG18.03
+PI:QRG18.03 rdf:type owl:NamedIndividual ,
+                     PI:CH18_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Evaluate and mitigate physical and psychosocial factors that may impair surgical wound healing or influence recurrence of a pressure injury." .
+
+
+###  http://example.org/PI#QRG18.04
+PI:QRG18.04 rdf:type owl:NamedIndividual ,
+                     PI:CH18_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Fully excise the pressure injury, including abnormal skin, granulation and necrotic tissue, sinus tracts, bursa and involved bone to the extent possible." .
+
+
+###  http://example.org/PI#QRG18.05
+PI:QRG18.05 rdf:type owl:NamedIndividual ,
+                     PI:CH18_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "When designing a flap: • Select tissue with a good quality blood supply • Use composite tissues to increase durability • Use a flap as large as possible • Minimize violation of adjacent skin and tissue • Locate the suture line away from areas of direct pressure • Minimize tension on the incision at closure." .
+
+
+###  http://example.org/PI#QRG18.06
+PI:QRG18.06 rdf:type owl:NamedIndividual ,
+                     PI:CH18_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Regularly monitor the wound and immediately report signs of flap failure." .
+
+
+###  http://example.org/PI#QRG18.07
+PI:QRG18.07 rdf:type owl:NamedIndividual ,
+                     PI:CH18_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Use a speciality support surface in the immediate post-operative period." .
+
+
+###  http://example.org/PI#QRG18.08
+PI:QRG18.08 rdf:type owl:NamedIndividual ,
+                     PI:CH18_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Position and transfer the individual in such a way as to avoid pressure on, and disruption to, the surgical site." .
+
+
+###  http://example.org/PI#QRG18.09
+PI:QRG18.09 rdf:type owl:NamedIndividual ,
+                     PI:CH18_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "When the surgical site is sufficiently healed commence a progressive sitting protocol." .
+
+
+###  http://example.org/PI#QRG19.01
+PI:QRG19.01 rdf:type owl:NamedIndividual ,
+                     PI:CH19_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Use a rigorous methodological design and consistent measurement variables when conducting and reporting pressure injury prevalence and incidence studies." .
+
+
+###  http://example.org/PI#QRG20.01
+PI:QRG20.01 rdf:type owl:NamedIndividual ,
+                     PI:CH20_Guideline ;
+            PI:has_evidence PI:SOE_C ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "At an organizational level, assess and maximize workforce characteristics as part of a quality improvement plan to reduce pressure injury incidence." .
+
+
+###  http://example.org/PI#QRG20.02
+PI:QRG20.02 rdf:type owl:NamedIndividual ,
+                     PI:CH20_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "At the organizational level, assess the knowledge health professionals have about pressure injuries to facilitate implementation of education and quality improvement programs." .
+
+
+###  http://example.org/PI#QRG20.03
+PI:QRG20.03 rdf:type owl:NamedIndividual ,
+                     PI:CH20_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "At an organizational level, assess and maximize workforce attitudes and cohesion to facilitate implementation of a quality improvement program." .
+
+
+###  http://example.org/PI#QRG20.04
+PI:QRG20.04 rdf:type owl:NamedIndividual ,
+                     PI:CH20_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "At an organizational level, assess and maximize the availability and quality of equipment and standards for its use as part of a quality improvement plan to reduce the incidence of pressure injuries." .
+
+
+###  http://example.org/PI#QRG20.05
+PI:QRG20.05 rdf:type owl:NamedIndividual ,
+                     PI:CH20_Guideline ;
+            PI:has_evidence PI:SOE_A ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "At an organizational level, develop and implement a structured, tailored and multifaceted quality improvement program to reduce the incidence of pressure injuries." .
+
+
+###  http://example.org/PI#QRG20.06
+PI:QRG20.06 rdf:type owl:NamedIndividual ,
+                     PI:CH20_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "At an organizational level, engage all key stakeholders in oversight and implementation of the quality improvement program to reduce the incidence of pressure injuries." .
+
+
+###  http://example.org/PI#QRG20.07
+PI:QRG20.07 rdf:type owl:NamedIndividual ,
+                     PI:CH20_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "At an organizational level, include evidencebased policies, procedures and protocols and standardized documentation systems as part of a quality improvement plan to reduce the incidence of pressure injuries." .
+
+
+###  http://example.org/PI#QRG20.08
+PI:QRG20.08 rdf:type owl:NamedIndividual ,
+                     PI:CH20_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "At an organizational level, provide clinical decision support tools as part of a quality improvement plan to reduce the incidence of pressure injuries." .
+
+
+###  http://example.org/PI#QRG20.09
+PI:QRG20.09 rdf:type owl:NamedIndividual ,
+                     PI:CH20_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "Provide clinical leadership in pressure injury prevention and treatment as part of a quality improvement plan to reduce pressure injuries." .
+
+
+###  http://example.org/PI#QRG20.10
+PI:QRG20.10 rdf:type owl:NamedIndividual ,
+                     PI:CH20_Guideline ;
+            PI:has_evidence PI:SOE_A ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "At a professional level, provide education in pressure injury prevention and treatment as part of a quality improvement plan to reduce the incidence of pressure injuries." .
+
+
+###  http://example.org/PI#QRG20.11
+PI:QRG20.11 rdf:type owl:NamedIndividual ,
+                     PI:CH20_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "At an organizational level, regularly monitor, analyze and evaluate performance against quality indicators for pressure injury prevention and treatment." .
+
+
+###  http://example.org/PI#QRG20.12
+PI:QRG20.12 rdf:type owl:NamedIndividual ,
+                     PI:CH20_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "At an organizational level, use feedback and reminder systems to promote the quality improvement program and its outcomes to stakeholders." .
+
+
+###  http://example.org/PI#QRG21.01
+PI:QRG21.01 rdf:type owl:NamedIndividual ,
+                     PI:CH21_Guideline ;
+            PI:has_evidence PI:SOE_B1 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "At the organizational level, assess the knowledge health professionals have about pressure injuries to facilitate implementation of education and quality improvement programs." .
+
+
+###  http://example.org/PI#QRG21.02
+PI:QRG21.02 rdf:type owl:NamedIndividual ,
+                     PI:CH21_Guideline ;
+            PI:has_evidence PI:SOE_B2 ;
+            PI:has_recommendation PI:SOR_Strong_positive ;
+            rdfs:comment "At an organizational level, develop and implement a multi-faceted education program for pressure injury prevention and treatment" .
+
+
+###  http://example.org/PI#QRG22.01
+PI:QRG22.01 rdf:type owl:NamedIndividual ,
+                     PI:CH22_Guideline ;
+            PI:has_evidence PI:SOE_GPS ;
+            PI:has_recommendation PI:SOR_None ;
+            rdfs:comment "Assess the health-related quality of life, knowledge and self-care skills of individuals with or at risk of pressure injuries to facilitate the development of a pressure injury care plan and education program." .
+
+
+###  http://example.org/PI#QRG22.02
+PI:QRG22.02 rdf:type owl:NamedIndividual ,
+                     PI:CH22_Guideline ;
+            PI:has_evidence PI:SOE_C ;
+            PI:has_recommendation PI:SOR_Weak_positive ;
+            rdfs:comment "Provide pressure injury education, skills training and psychosocial support to individuals with or at risk of pressure injuries." .
+
+
+###  http://example.org/PI#Reactive_Air_Pressure_Mattresses
+PI:Reactive_Air_Pressure_Mattresses rdf:type owl:NamedIndividual ,
+                                             PI:CH7_SubHeading ;
+                                    PI:has_guideline PI:QRG07.05 ;
+                                    rdfs:comment "Reactive Air Pressure Mattresses" .
+
+
+###  http://example.org/PI#Recommendations_for_Assessment_of_the_Skin_and_Medical_Device
+PI:Recommendations_for_Assessment_of_the_Skin_and_Medical_Device rdf:type owl:NamedIndividual ,
+                                                                          PI:CH8_SubHeading ;
+                                                                 PI:has_guideline PI:QRG08.03 ;
+                                                                 rdfs:comment "Recommendations for Assessment of the Skin and Medical Device" .
+
+
+###  http://example.org/PI#Recommendations_for_Prevention_of_Medical_Device_Related_Pressure_Injuries
+PI:Recommendations_for_Prevention_of_Medical_Device_Related_Pressure_Injuries rdf:type owl:NamedIndividual ,
+                                                                                       PI:CH8_SubHeading ;
+                                                                              PI:has_guideline PI:QRG08.04 ,
+                                                                                               PI:QRG08.05 ,
+                                                                                               PI:QRG08.06 ,
+                                                                                               PI:QRG08.07 ,
+                                                                                               PI:QRG08.08 ;
+                                                                              rdfs:comment "Recommendations for Prevention of Medical Device Related Pressure Injuries" .
+
+
+###  http://example.org/PI#Recommendations_for_Selecting_Fitting_and_Securing_a_Medical_Device
+PI:Recommendations_for_Selecting_Fitting_and_Securing_a_Medical_Device rdf:type owl:NamedIndividual ,
+                                                                                PI:CH8_SubHeading ;
+                                                                       PI:has_guideline PI:QRG08.01 ,
+                                                                                        PI:QRG08.02 ;
+                                                                       rdfs:comment "Recommendations for Selecting Fitting and Securing a Medical Device" .
+
+
+###  http://example.org/PI#Repositioning_Frequency
+PI:Repositioning_Frequency rdf:type owl:NamedIndividual ,
+                                    PI:CH5_SubHeading ;
+                           PI:has_guideline PI:QRG05.02 ,
+                                            PI:QRG05.03 ,
+                                            PI:QRG05.04 ;
+                           rdfs:comment "Repositioning Frequency" .
+
+
+###  http://example.org/PI#Repositioning_Individuals_in_Bed
+PI:Repositioning_Individuals_in_Bed rdf:type owl:NamedIndividual ,
+                                             PI:CH5_SubHeading ;
+                                    PI:has_guideline PI:QRG05.08 ,
+                                                     PI:QRG05.09 ;
+                                    rdfs:comment "Repositioning Individuals in Bed" .
+
+
+###  http://example.org/PI#Repositioning_Individuals_in_Critical_Care
+PI:Repositioning_Individuals_in_Critical_Care rdf:type owl:NamedIndividual ,
+                                                       PI:CH5_SubHeading ;
+                                              PI:has_guideline PI:QRG05.17 ,
+                                                               PI:QRG05.18 ;
+                                              rdfs:comment "Repositioning Individuals in Critical Care" .
+
+
+###  http://example.org/PI#Repositioning_Individuals_in_the_Operating_Room
+PI:Repositioning_Individuals_in_the_Operating_Room rdf:type owl:NamedIndividual ,
+                                                            PI:CH5_SubHeading ;
+                                                   PI:has_guideline PI:QRG05.19 ;
+                                                   rdfs:comment "Repositioning Individuals in the Operating Room" .
+
+
+###  http://example.org/PI#Repositioning_Techniques
+PI:Repositioning_Techniques rdf:type owl:NamedIndividual ,
+                                     PI:CH5_SubHeading ;
+                            PI:has_guideline PI:QRG05.05 ,
+                                             PI:QRG05.06 ,
+                                             PI:QRG05.07 ;
+                            rdfs:comment "Repositioning Techniques" .
+
+
+###  http://example.org/PI#Repositioning_and_Pressure_Redistribution_for_Seated_Individuals
+PI:Repositioning_and_Pressure_Redistribution_for_Seated_Individuals rdf:type owl:NamedIndividual ,
+                                                                             PI:CH5_SubHeading ;
+                                                                    PI:has_guideline PI:QRG05.11 ,
+                                                                                     PI:QRG05.12 ,
+                                                                                     PI:QRG05.13 ;
+                                                                    rdfs:comment "Repositioning and Pressure Redistribution for Seated Individuals" .
+
+
+###  http://example.org/PI#Repositioning_for_Individuals_with_Existing_Pressure_Injuries
+PI:Repositioning_for_Individuals_with_Existing_Pressure_Injuries rdf:type owl:NamedIndividual ,
+                                                                          PI:CH5_SubHeading ;
+                                                                 PI:has_guideline PI:QRG05.16 ;
+                                                                 rdfs:comment "Repositioning for Individuals with Existing Pressure Injuries" .
+
+
+###  http://example.org/PI#SOE_A
+PI:SOE_A rdf:type owl:NamedIndividual ,
+                  PI:Strength_of_evidence ;
+         rdfs:comment "More than one high quality Level I study providing direct evidence;  Consistent body of evidence" ;
+         rdfs:label "A" .
+
+
+###  http://example.org/PI#SOE_B1
+PI:SOE_B1 rdf:type owl:NamedIndividual ,
+                   PI:Strength_of_evidence ;
+          rdfs:comment "Level 1 studies of moderate or low quality providing direct evidence;  Level 2 studies of high or moderate quality providing direct evidence;  Most studies have consistent outcomes and inconsistencies can be explained" ;
+          rdfs:label "B1" .
+
+
+###  http://example.org/PI#SOE_B2
+PI:SOE_B2 rdf:type owl:NamedIndividual ,
+                   PI:Strength_of_evidence ;
+          rdfs:comment "Level 2 studies of low quality providing direct evidence; Level 3 or 4 studies (regardless of quality) providing direct evidence;  Most studies have consistent outcomes and inconsistencies can be explained" ;
+          rdfs:label "B2" .
+
+
+###  http://example.org/PI#SOE_C
+PI:SOE_C rdf:type owl:NamedIndividual ,
+                  PI:Strength_of_evidence ;
+         rdfs:comment "Level 5 studies (indirect evidence) e.g., studies in normal human subjects, humans with other types of chronic wounds, animal models; A body of evidence with inconsistencies that cannot be explained, reflecting genuine uncertainty surrounding the topic" ;
+         rdfs:label "C" .
+
+
+###  http://example.org/PI#SOE_GPS
+PI:SOE_GPS rdf:type owl:NamedIndividual ,
+                    PI:Strength_of_evidence ;
+           rdfs:comment "Good Practice Statement:  Statements that are not supported by a body of evidence as listed above but considered by the GGG to be significant for clinical practice." ;
+           rdfs:label "GPS" .
+
+
+###  http://example.org/PI#SOR_No_recommendation
+PI:SOR_No_recommendation rdf:type owl:NamedIndividual ,
+                                  PI:Strength_of_recommendation ;
+                         rdfs:comment "No specific recommendation" ;
+                         rdfs:label "No specific recommendation" .
+
+
+###  http://example.org/PI#SOR_None
+PI:SOR_None rdf:type owl:NamedIndividual ,
+                     PI:Strength_of_recommendation ;
+            rdfs:label "---" .
+
+
+###  http://example.org/PI#SOR_Strong_positive
+PI:SOR_Strong_positive rdf:type owl:NamedIndividual ,
+                                PI:Strength_of_recommendation ;
+                       rdfs:comment "Strong positive recommendation: Definitely do it" ;
+                       rdfs:label "Definitely do it" .
+
+
+###  http://example.org/PI#SOR_Weak_positive
+PI:SOR_Weak_positive rdf:type owl:NamedIndividual ,
+                              PI:Strength_of_recommendation ;
+                     rdfs:comment "Weak positive recommendation: Probably do it" ;
+                     rdfs:label "Probably do it" .
+
+
+###  http://example.org/PI#Seating_Support_Surfaces_for_Individuals_with_or_at_Risk_of_Pressure_Injuries
+PI:Seating_Support_Surfaces_for_Individuals_with_or_at_Risk_of_Pressure_Injuries rdf:type owl:NamedIndividual ,
+                                                                                          PI:CH7_SubHeading ;
+                                                                                 PI:has_guideline PI:QRG07.11 ,
+                                                                                                  PI:QRG07.12 ,
+                                                                                                  PI:QRG07.13 ,
+                                                                                                  PI:QRG07.14 ;
+                                                                                 rdfs:comment "Seating Support Surfaces for Individuals with or at Risk of Pressure Injuries" .
+
+
+###  http://example.org/PI#Sensory_Perception_as_a_Risk_Factor_for_Pressure_Injuries
+PI:Sensory_Perception_as_a_Risk_Factor_for_Pressure_Injuries rdf:type owl:NamedIndividual ,
+                                                                      PI:CH1_SubHeading ;
+                                                             PI:has_guideline PI:QRG01.14 ;
+                                                             rdfs:comment "Sensory Perception as a Risk Factor for Pressure Injuries" .
+
+
+###  http://example.org/PI#Single_Layer_High_Specification_Foam_Mattresses
+PI:Single_Layer_High_Specification_Foam_Mattresses rdf:type owl:NamedIndividual ,
+                                                            PI:CH7_SubHeading ;
+                                                   PI:has_guideline PI:QRG07.04 ;
+                                                   rdfs:comment "Single Layer High Specification Foam Mattresses" .
+
+
+###  http://example.org/PI#Skin_Hygiene
+PI:Skin_Hygiene rdf:type owl:NamedIndividual ,
+                         PI:CH3_SubHeading ;
+                PI:has_guideline PI:QRG03.01 ,
+                                 PI:QRG03.02 ;
+                rdfs:comment "Skin Hygiene" .
+
+
+###  http://example.org/PI#Skin_Status_as_a_Risk_Factor_for_Pressure_Injuries
+PI:Skin_Status_as_a_Risk_Factor_for_Pressure_Injuries rdf:type owl:NamedIndividual ,
+                                                               PI:CH1_SubHeading ;
+                                                      PI:has_guideline PI:QRG01.02 ,
+                                                                       PI:QRG01.03 ,
+                                                                       PI:QRG01.04 ,
+                                                                       PI:QRG01.05 ,
+                                                                       PI:QRG01.06 ;
+                                                      rdfs:comment "Skin Status as a Risk Factor for Pressure Injuries" .
+
+
+###  http://example.org/PI#Support_Surface_Selection_and_Use
+PI:Support_Surface_Selection_and_Use rdf:type owl:NamedIndividual ,
+                                              PI:CH7_SubHeading ;
+                                     PI:has_guideline PI:QRG07.01 ,
+                                                      PI:QRG07.02 ,
+                                                      PI:QRG07.03 ;
+                                     rdfs:comment "Support Surface Selection and Use" .
+
+
+###  http://example.org/PI#Support_Surface_Use_During_Transportation
+PI:Support_Surface_Use_During_Transportation rdf:type owl:NamedIndividual ,
+                                                      PI:CH7_SubHeading ;
+                                             PI:has_guideline PI:QRG07.15 ,
+                                                              PI:QRG07.16 ;
+                                             rdfs:comment "Support Surface Use During Transportation" .
+
+
+###  http://example.org/PI#Support_Surfaces_to_Prevent_Pressure_Injuries_in_the_Operating_Room
+PI:Support_Surfaces_to_Prevent_Pressure_Injuries_in_the_Operating_Room rdf:type owl:NamedIndividual ,
+                                                                                PI:CH7_SubHeading ;
+                                                                       PI:has_guideline PI:QRG07.08 ;
+                                                                       rdfs:comment "Support Surfaces to Prevent Pressure Injuries in the Operating Room" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
