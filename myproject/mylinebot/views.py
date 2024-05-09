@@ -6,7 +6,7 @@ from linebot import LineBotApi, WebhookParser
 
 from linebot.exceptions import InvalidSignatureError, LineBotApiError
 from linebot.models import MessageEvent, TextSendMessage, TextMessage
-
+from linebot.models import ConfirmTemplate, MessageAction, TemplateSendMessage,PostbackEvent,PostbackAction
 import pandas as pd
 from rdflib.plugins.sparql import prepareQuery
 import os
@@ -74,10 +74,60 @@ CQ8.3 Is a prophylactic dressing effective for preventing MDRPIs? If so, what fa
 #可測試問題範例
 # 怎樣會讓增加足跟壓力損傷的可能？
 #有新生兒和兒童的營養相關的建議嗎?
-openai.api_key = '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'
+openai.api_key = 'Plz Input Your OPEN_AI API_KEY'
 
 
-# 壓瘡相關 end
+# # 壓瘡相關 end
+user_dialogues = {}
+
+def update_user_dialogue(user_id, message):
+    """更新用對話歷史紀錄。"""
+    if user_id not in user_dialogues:
+        user_dialogues[user_id] = []
+    user_dialogues[user_id].append(message)
+    print("=====歷史紀錄=====")
+    print(user_dialogues[user_id])
+
+def get_user_dialogue(user_id):
+    """提取用戶對話歷史紀錄。"""
+    return user_dialogues.get(user_id, [])
+
+def send_question_to_chatgpt(user_id):
+    """把問題及對話紀錄丟給gpt"""
+    dialogue_history = get_user_dialogue(user_id)
+    response = send_question_to_openai_gpt3_normalQuestion(dialogue_history)
+    # 更新對話紀錄，包括 ChatGPT 的回覆
+    update_user_dialogue(user_id, {"chatgpt": response})
+    return response
+
+def send_question_to_openai_gpt3_normalQuestion(dialogue_history):
+    dialogue_history_str = "\n".join(
+    [f"{key}: {value if isinstance(value, str) else json.dumps(value, ensure_ascii=False)}" 
+     for message in dialogue_history 
+     for key, value in message.items()]
+)
+
+    print(dialogue_history_str)
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo-16k",
+        messages=[
+            {'role': 'system','content': f'你是一個處理壓瘡的機器人，使用者會向你提出一些問題及相關的解決方法！，請直接回答使用者問題即可！ 以下為你與用戶先前的對話記錄:\n{dialogue_history_str}'},
+            {'role': 'user','content': '如何預防壓瘡？'},
+            {'role': 'assistant', 'content': '''您可為避免壓瘡出現，提供以下建議：\n
+1. 規律翻身：協助病患定期改變體位，避免長時間施壓於同一區域。\n
+2. 保持乾燥：確保皮膚保持乾燥，避免長時間接觸濕氣。\n
+3. 良好的營養：提供充足的營養，包括蛋白質、維生素和礦物質，以促進皮膚健康。\n
+4. 使用合適的壓瘡墊：選擇適合的床墊或坐墊，以分散壓力並減少接觸力。\n
+5. 檢查皮膚：定期檢查皮膚，尤其是容易受壓的部位，如臀部、腳底和脊椎。\n
+6. 定期按摩：輕輕按摩受壓部位，促進血液循環並減少壓力。\n
+7. 注意溢傷液：當壓瘡出現時，及早處理溢傷液，避免感染和加重傷口。\n
+8. 教育患者及照護者：提供患者及其照護者有關壓瘡預防和護理的教育，以增加其對壓瘡注意事項的了解。\n
+
+希望以上建議能對您有所幫助！如果您有其他問題或需要進一步的解釋，請隨時告訴我。'''},
+        ]
+    )
+    return response.choices[0].message.content
+
 
 def send_question_to_openai_gpt3(question):
     response = openai.ChatCompletion.create(
@@ -128,13 +178,78 @@ def format_rdf_response(response):
     formatted_responses = []
     for item in response:
         formatted_message = (
-            f"Reference No: {item[0]}\n"
-            f"SOR Label: {item[1]}\n"
-            f"SOE Label: {item[2]}\n"
-            f"Comment: {item[3]}"
+            f"原則編號: {item[0]}\n"
+            f"推薦強度: {item[1]}\n"
+            f"證據強度: {item[2]}\n"
+            f"原則內容: {item[3]}"
         )
         formatted_responses.append(formatted_message)
     return formatted_responses
+def perform_rdf_query2(qrg_label):
+    g = Graph()
+    # g.parse("path/to/your/Guideline0607_MAX.ttl", format="turtle")
+
+    query = prepareQuery(f"""
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX PI: <http://example.org/PI#>
+SELECT distinct ?comment ?SOE_lab ?SOR_lab ?part_lab ?chapter_com 
+?subHeading_com ?CQ ?CQ_com ?QI ?QI_com ?SP_lab
+WHERE {{
+      SERVICE <http://localhost:3030/temp_inf/query> {{   
+        {{PI:{qrg_label} rdfs:comment ?comment; 
+	 PI:has_recommendation ?SOR;
+	PI:has_evidence ?SOE; 
+	 rdf:type ?chapter. 
+	 ?SOR rdfs:label ?SOR_lab.
+	?SOE rdfs:label ?SOE_lab. 
+	?chapter rdfs:subClassOf ?part;
+	 rdfs:comment ?chapter_com. 
+	?part rdfs:subClassOf PI:Knowledge_Structure;
+	 rdfs:label ?part_lab.
+	optional {{
+	 ?SubHeading PI:has_guideline PI:{qrg_label}; 
+	 rdf:type PI:SubHeadings;
+	rdfs:comment ?subHeading_com. }} }}
+	
+	UNION {{ optional {{
+	 ?CQ PI:has_guideline PI:{qrg_label}; 
+	 rdf:type PI:Clinical_Questions;
+	 rdfs:comment ?CQ_com. }} }}
+	 
+	UNION {{ optional {{
+	 ?QI PI:has_guideline PI:{qrg_label}; 
+	 rdf:type PI:Quality_indicators;
+	 rdfs:comment ?QI_com. }} }}
+	 
+	UNION {{ optional {{
+	 PI:{qrg_label} rdf:type ?SP.
+	?SP rdfs:subClassOf PI:Special_Populations;
+	 rdfs:label ?SP_lab. }} }}  
+    }}
+    }}
+    """  )
+    results = g.query(query)
+    return [(row.comment, row.SOE_lab, row.SOR_lab, row.part_lab, row.chapter_com, row.subHeading_com, row.CQ, row.CQ_com, row.QI, row.QI_com, row.SP_lab) for row in results]
+
+def format_rdf_response2(response):
+    formatted_responses = []
+    titles = ["Comment", "SOE Label", "SOR Label", "Part Label", "Chapter Comment", 
+              "SubHeading Comment", "CQ", "CQ Comment", "QI", "QI Comment", "SP Label"]
+
+    for item in response:
+        formatted_message_lines = []
+        for title, value in zip(titles, item):
+            if value:  # 檢查值是否存在
+                formatted_message_lines.append(f"{title}: {value}")
+        
+        formatted_message = "\n".join(formatted_message_lines)
+        formatted_responses.append(formatted_message)
+
+    return formatted_responses
+
+
+
 @csrf_exempt
 def callback(request):
     if request.method == 'POST':
@@ -150,35 +265,96 @@ def callback(request):
  
         for event in events:
             if isinstance(event, MessageEvent):  # 如果有訊息事件
-                print(event.message.text)
-                reCQ = send_question_to_openai_gpt3(event.message.text)
-                json_string = reCQ.replace("'", '"')
+                user_id = event.source.user_id
+                user_message = event.message.text
 
-                # 使用 json.loads() 转换为字典
-                dictionary = json.loads(json_string)
-                cq_label = dictionary["label"]
-                if cq_label=='None':
+                # 更新用户對話歷史
+                update_user_dialogue(user_id, {"user": user_message})
+                print(event.message.text)
+                if event.message.text == "@開始發問":
                     line_bot_api.reply_message(  # 回復傳入的訊息文字
                     event.reply_token,
-                    TextSendMessage(text='查無結果')
+                    TextSendMessage(text='您好，我是壓瘡小幫手，有什麼問題都可以問我哦！輸入問題後我會根據壓瘡指南給您對應的資訊哦！如果有錯誤的話建議再重新打一次，內容盡量完整一點，謝謝您。')
                 )
+
+                
+                elif '@' in event.message.text:
+                    user_dialogues[user_id] = []#清空先前對話紀錄，太多會超出提問範圍
+                    reCQ = send_question_to_openai_gpt3(event.message.text)
+                    json_string = reCQ.replace("'", '"')
+                    # 使用 json.loads() 转换为字典
+                    dictionary = json.loads(json_string)
+                    cq_label = dictionary["label"]
+                
+                    if cq_label=='None':
+                        line_bot_api.reply_message(  # 回復傳入的訊息文字
+                        event.reply_token,
+                        TextSendMessage(text='查無結果')
+                    )
+                    else:
+                        # 發送確認消息和按鈕模板，包括 cq_label
+                        text=""
+                        confirm_template_message = TemplateSendMessage(
+                            alt_text='Confirm template',
+                            template=ConfirmTemplate(
+                                text=f"符合的問題為{dictionary['guildline']}",
+                                actions=[
+                                    PostbackAction(label="是", data=f"confirm_yes,{cq_label}"),
+                                    PostbackAction(label="否", data="confirm_no")
+                                ]
+                            )
+                        )
+                        # 更新用户對話歷史
+                        update_user_dialogue(user_id, {"user": user_message})
+                        # 更新對話紀錄，包括 ChatGPT 的回覆
+                        update_user_dialogue(user_id, {"chatgpt": text})
+                        
+                        line_bot_api.reply_message(event.reply_token, confirm_template_message)
                 else:
+                    response=send_question_to_chatgpt(user_id)
+                    #聊天模式
+                    line_bot_api.reply_message(  # 回復傳入的訊息文字
+                    event.reply_token,
+                    TextSendMessage(text=response)
+                )
+
+            elif isinstance(event, PostbackEvent):  # 處理按鈕的回應
+                data = event.postback.data.split(',')
+
+                if data[0] == "confirm_yes":
+                    cq_label = data[1]
+                    # 使用 cq_label 進行SPARQL查詢
                     ans = perform_rdf_query(cq_label)
                     formatted_ans = format_rdf_response(ans)
-                    messages = [TextSendMessage(text="符合的問題為"+dictionary["guildline"])]
-                    messages.extend([TextSendMessage(text=msg) for msg in formatted_ans])
 
-                    # 一次回復多條訊息
+                    # 提取所有的 QRG 編號
+                    principle_numbers = []
+                    for msg in formatted_ans:
+                        split_text = msg.split("http://example.org/PI#")
+                        if len(split_text) > 1:
+                            principle_number = split_text[1].split("\n")[0]
+                            principle_numbers.append(principle_number)
+
+                    # 對每個編號進行處理並發送推送消息
+                    user_id = event.source.user_id  # 替換為獲取用戶ID的適當方法
+                    for number in principle_numbers:
+                        ans2 = perform_rdf_query2(number)
+                        formatted_ans2 = format_rdf_response2(ans2)
+                        combined_message = "\n".join(formatted_ans2)
+                        message = TextSendMessage(text=combined_message)
+                        line_bot_api.push_message(user_id, message)
+                        # 更新對話紀錄，包括 ChatGPT 的回覆
+                        update_user_dialogue(user_id, {"chatgpt": combined_message})
+
+
+
+                elif data[0] == "confirm_no":
+                    # 提醒用戶重新輸入問題
                     line_bot_api.reply_message(
                         event.reply_token,
-                        messages
+                        TextSendMessage(text='請重新輸入問題')
                     )
-                    print(ans)
-                    print('=====')
-                    print(str(ans))
-                
-        
-        return HttpResponse()
-    else: 
-        return HttpResponseBadRequest()
 
+        return HttpResponse()
+    else:
+        return HttpResponseBadRequest()
